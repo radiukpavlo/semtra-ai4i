@@ -209,10 +209,10 @@ def figure_thresholds(data, run: Path, out: Path) -> None:
     for a, lab in zip(axes, "abc"):
         style_axis(a)
         add_panel_label(a, lab)
-    handles = [plt.Line2D([], [], color=PALETTE["black"], ls="--", lw=0.8, label="documented rule")]
+    handles = [plt.Line2D([], [], color=PALETTE["black"], ls="--", lw=0.8, label="Documented rule")]
     handles += [plt.Line2D([], [], color=c, lw=1.0, label=l) for _, c, l, _ in lines]
     handles += [plt.Line2D([], [], ls="", marker="o", ms=3, mew=0, color=PALETTE["vermillion"], label="HDF, PWF, OSF rows"),
-                plt.Line2D([], [], ls="", marker="o", ms=3, mew=0, color=PALETTE["light"], label="other rows")]
+                plt.Line2D([], [], ls="", marker="o", ms=3, mew=0, color=PALETTE["light"], label="Other rows")]
     fig.legend(handles=handles, loc="outside upper center", ncol=5)
     save_figure(fig, out / "F2_thresholds_vs_physics")
 
