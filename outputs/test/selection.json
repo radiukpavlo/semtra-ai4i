@@ -1,0 +1,373 @@
+[
+  {
+    "seed": 42,
+    "mlp_alpha": 0.001,
+    "mlp_n_iter": 201,
+    "mlp_grid": [
+      {
+        "alpha": 0.0001,
+        "val_macro_f1": 0.6925000959272022,
+        "n_iter": 300
+      },
+      {
+        "alpha": 0.001,
+        "val_macro_f1": 0.7153251639397625,
+        "n_iter": 201
+      },
+      {
+        "alpha": 0.01,
+        "val_macro_f1": 0.7066522024259874,
+        "n_iter": 300
+      }
+    ],
+    "cart_max_depth": 6,
+    "cart_grid": [
+      {
+        "max_depth": 3,
+        "val_macro_f1": 0.5149867996479907,
+        "leaves": 6
+      },
+      {
+        "max_depth": 4,
+        "val_macro_f1": 0.5149867996479907,
+        "leaves": 7
+      },
+      {
+        "max_depth": 5,
+        "val_macro_f1": 0.6871778801843318,
+        "leaves": 9
+      },
+      {
+        "max_depth": 6,
+        "val_macro_f1": 0.6875573005805565,
+        "leaves": 13
+      },
+      {
+        "max_depth": 7,
+        "val_macro_f1": 0.6875573005805565,
+        "leaves": 18
+      },
+      {
+        "max_depth": 8,
+        "val_macro_f1": 0.6875573005805565,
+        "leaves": 23
+      }
+    ],
+    "rule_min_support": 11,
+    "class_reducts": {
+      "Class-reduct rulebook (predicted concepts)": {
+        "OSF": "strain_minNm",
+        "PWF": "power_W"
+      },
+      "Class-reduct rulebook (true concepts)": {
+        "HDF": "delta_t_K;speed_rpm",
+        "OSF": "strain_minNm;product_type",
+        "PWF": "power_W"
+      }
+    },
+    "transition_n_components": 63,
+    "transition_alpha": 0.01,
+    "transition_explained_variance": 0.9999979138374329,
+    "n_train": 5974,
+    "n_val": 1992,
+    "n_eval": 1992,
+    "seconds": 58.7
+  },
+  {
+    "seed": 43,
+    "mlp_alpha": 0.01,
+    "mlp_n_iter": 219,
+    "mlp_grid": [
+      {
+        "alpha": 0.0001,
+        "val_macro_f1": 0.7066776950647918,
+        "n_iter": 219
+      },
+      {
+        "alpha": 0.001,
+        "val_macro_f1": 0.7297787366368108,
+        "n_iter": 233
+      },
+      {
+        "alpha": 0.01,
+        "val_macro_f1": 0.7339470705694615,
+        "n_iter": 219
+      }
+    ],
+    "cart_max_depth": 7,
+    "cart_grid": [
+      {
+        "max_depth": 3,
+        "val_macro_f1": 0.5372325122383665,
+        "leaves": 6
+      },
+      {
+        "max_depth": 4,
+        "val_macro_f1": 0.5372325122383665,
+        "leaves": 7
+      },
+      {
+        "max_depth": 5,
+        "val_macro_f1": 0.6415164642768961,
+        "leaves": 9
+      },
+      {
+        "max_depth": 6,
+        "val_macro_f1": 0.6463637587341988,
+        "leaves": 13
+      },
+      {
+        "max_depth": 7,
+        "val_macro_f1": 0.6598078578287239,
+        "leaves": 16
+      },
+      {
+        "max_depth": 8,
+        "val_macro_f1": 0.6574809502465262,
+        "leaves": 21
+      }
+    ],
+    "rule_min_support": 11,
+    "class_reducts": {
+      "Class-reduct rulebook (predicted concepts)": {
+        "OSF": "strain_minNm;product_type",
+        "PWF": "power_W"
+      },
+      "Class-reduct rulebook (true concepts)": {
+        "HDF": "delta_t_K;speed_rpm",
+        "OSF": "strain_minNm;product_type",
+        "PWF": "power_W"
+      }
+    },
+    "transition_n_components": 63,
+    "transition_alpha": 0.01,
+    "transition_explained_variance": 1.0000009536743164,
+    "n_train": 5974,
+    "n_val": 1992,
+    "n_eval": 1992,
+    "seconds": 50.0
+  },
+  {
+    "seed": 44,
+    "mlp_alpha": 0.01,
+    "mlp_n_iter": 277,
+    "mlp_grid": [
+      {
+        "alpha": 0.0001,
+        "val_macro_f1": 0.6859668493652797,
+        "n_iter": 277
+      },
+      {
+        "alpha": 0.001,
+        "val_macro_f1": 0.6923230540264053,
+        "n_iter": 277
+      },
+      {
+        "alpha": 0.01,
+        "val_macro_f1": 0.6959195271142155,
+        "n_iter": 277
+      }
+    ],
+    "cart_max_depth": 5,
+    "cart_grid": [
+      {
+        "max_depth": 3,
+        "val_macro_f1": 0.48501747355668423,
+        "leaves": 7
+      },
+      {
+        "max_depth": 4,
+        "val_macro_f1": 0.48501747355668423,
+        "leaves": 8
+      },
+      {
+        "max_depth": 5,
+        "val_macro_f1": 0.6705492859354858,
+        "leaves": 10
+      },
+      {
+        "max_depth": 6,
+        "val_macro_f1": 0.6705492859354858,
+        "leaves": 14
+      },
+      {
+        "max_depth": 7,
+        "val_macro_f1": 0.6705492859354858,
+        "leaves": 19
+      },
+      {
+        "max_depth": 8,
+        "val_macro_f1": 0.6705492859354858,
+        "leaves": 21
+      }
+    ],
+    "rule_min_support": 11,
+    "class_reducts": {
+      "Class-reduct rulebook (predicted concepts)": {
+        "HDF": "delta_t_K;speed_rpm",
+        "OSF": "strain_minNm;product_type",
+        "PWF": "power_W"
+      },
+      "Class-reduct rulebook (true concepts)": {
+        "HDF": "delta_t_K;speed_rpm",
+        "OSF": "strain_minNm;product_type",
+        "PWF": "power_W"
+      }
+    },
+    "transition_n_components": 63,
+    "transition_alpha": 0.01,
+    "transition_explained_variance": 0.9999987483024597,
+    "n_train": 5974,
+    "n_val": 1992,
+    "n_eval": 1992,
+    "seconds": 65.7
+  },
+  {
+    "seed": 45,
+    "mlp_alpha": 0.01,
+    "mlp_n_iter": 282,
+    "mlp_grid": [
+      {
+        "alpha": 0.0001,
+        "val_macro_f1": 0.6599597118965843,
+        "n_iter": 184
+      },
+      {
+        "alpha": 0.001,
+        "val_macro_f1": 0.6663787891561187,
+        "n_iter": 184
+      },
+      {
+        "alpha": 0.01,
+        "val_macro_f1": 0.6833642441653103,
+        "n_iter": 282
+      }
+    ],
+    "cart_max_depth": 5,
+    "cart_grid": [
+      {
+        "max_depth": 3,
+        "val_macro_f1": 0.50144265539949,
+        "leaves": 7
+      },
+      {
+        "max_depth": 4,
+        "val_macro_f1": 0.4791212967713737,
+        "leaves": 10
+      },
+      {
+        "max_depth": 5,
+        "val_macro_f1": 0.6483050077023415,
+        "leaves": 12
+      },
+      {
+        "max_depth": 6,
+        "val_macro_f1": 0.6170767195767195,
+        "leaves": 16
+      },
+      {
+        "max_depth": 7,
+        "val_macro_f1": 0.6464475555173828,
+        "leaves": 21
+      },
+      {
+        "max_depth": 8,
+        "val_macro_f1": 0.6464475555173828,
+        "leaves": 24
+      }
+    ],
+    "rule_min_support": 11,
+    "class_reducts": {
+      "Class-reduct rulebook (predicted concepts)": {
+        "OSF": "strain_minNm",
+        "PWF": "torque_Nm"
+      },
+      "Class-reduct rulebook (true concepts)": {
+        "HDF": "delta_t_K;speed_rpm",
+        "OSF": "strain_minNm;product_type",
+        "PWF": "power_W"
+      }
+    },
+    "transition_n_components": 63,
+    "transition_alpha": 0.01,
+    "transition_explained_variance": 0.9999973773956299,
+    "n_train": 5974,
+    "n_val": 1992,
+    "n_eval": 1992,
+    "seconds": 48.0
+  },
+  {
+    "seed": 46,
+    "mlp_alpha": 0.01,
+    "mlp_n_iter": 237,
+    "mlp_grid": [
+      {
+        "alpha": 0.0001,
+        "val_macro_f1": 0.7100314286579598,
+        "n_iter": 261
+      },
+      {
+        "alpha": 0.001,
+        "val_macro_f1": 0.7170865353560008,
+        "n_iter": 257
+      },
+      {
+        "alpha": 0.01,
+        "val_macro_f1": 0.7412750164270682,
+        "n_iter": 237
+      }
+    ],
+    "cart_max_depth": 5,
+    "cart_grid": [
+      {
+        "max_depth": 3,
+        "val_macro_f1": 0.4811242400890487,
+        "leaves": 7
+      },
+      {
+        "max_depth": 4,
+        "val_macro_f1": 0.4811242400890487,
+        "leaves": 9
+      },
+      {
+        "max_depth": 5,
+        "val_macro_f1": 0.6396800825593395,
+        "leaves": 11
+      },
+      {
+        "max_depth": 6,
+        "val_macro_f1": 0.6149660740359013,
+        "leaves": 15
+      },
+      {
+        "max_depth": 7,
+        "val_macro_f1": 0.6149660740359013,
+        "leaves": 20
+      },
+      {
+        "max_depth": 8,
+        "val_macro_f1": 0.6149660740359013,
+        "leaves": 24
+      }
+    ],
+    "rule_min_support": 11,
+    "class_reducts": {
+      "Class-reduct rulebook (predicted concepts)": {
+        "OSF": "strain_minNm;noise_sensor",
+        "PWF": "power_W"
+      },
+      "Class-reduct rulebook (true concepts)": {
+        "HDF": "delta_t_K;speed_rpm",
+        "OSF": "strain_minNm;product_type",
+        "PWF": "power_W"
+      }
+    },
+    "transition_n_components": 63,
+    "transition_alpha": 0.1,
+    "transition_explained_variance": 1.0,
+    "n_train": 5974,
+    "n_val": 1992,
+    "n_eval": 1992,
+    "seconds": 52.0
+  }
+]

@@ -1,0 +1,11 @@
+Concept,Definition,Unit,Role,Test R²,Test MAE (unit)
+ΔT,ΔT = process − air temperature,K,rule (HDF),0.974 ± 0.007,0.119 ± 0.016
+Speed,Rotational speed,rpm,rule (HDF),0.992 ± 0.003,12.298 ± 2.183
+Torque,Torque,Nm,"physical, in no rule by itself",0.989 ± 0.002,0.780 ± 0.086
+Power,Power = torque · speed · 2π/60,W,rule (PWF),0.980 ± 0.005,110.190 ± 14.616
+Tool wear,Tool wear,min,"rule (TWF, random)",0.992 ± 0.003,4.138 ± 0.688
+Strain,Strain = tool wear · torque,minNm,rule (OSF),0.990 ± 0.003,204.470 ± 25.390
+Product type,Product type L/M/H coded 0/1/2,-,rule (OSF),0.992 ± 0.002,0.035 ± 0.004
+Air temp.,Air temperature,K,distractor,0.991 ± 0.002,0.139 ± 0.017
+Process temp.,Process temperature,K,distractor,0.990 ± 0.002,0.106 ± 0.010
+Noise sensor,"Noise sensor, N(50, 10²)",-,distractor,-0.017 ± 0.003,8.078 ± 0.103

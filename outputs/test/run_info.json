@@ -1,0 +1,41 @@
+{
+  "stage": "test",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "rows_kept": 9958,
+  "dropped": {
+    "rnf_rows": 19,
+    "multi_mode_rows_without_rnf": 23
+  },
+  "class_counts": [
+    9652,
+    106,
+    80,
+    78,
+    42
+  ],
+  "class_names": [
+    "none",
+    "HDF",
+    "PWF",
+    "OSF",
+    "TWF"
+  ],
+  "concepts": [
+    "delta_t_K",
+    "speed_rpm",
+    "torque_Nm",
+    "power_W",
+    "tool_wear_min",
+    "strain_minNm",
+    "product_type",
+    "air_temp_K",
+    "process_temp_K",
+    "noise_sensor"
+  ]
+}

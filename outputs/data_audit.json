@@ -1,0 +1,89 @@
+{
+  "rows": 10000,
+  "type_counts": {
+    "L": 6000,
+    "M": 2997,
+    "H": 1003
+  },
+  "machine_failure": 339,
+  "mode_counts": {
+    "TWF": 46,
+    "HDF": 115,
+    "PWF": 95,
+    "OSF": 98,
+    "RNF": 19
+  },
+  "rows_with_any_mode": 348,
+  "rows_with_multiple_modes": 24,
+  "machine_failure_without_mode": 9,
+  "mode_without_machine_failure": 18,
+  "rnf_only_rows": 18,
+  "documented_rule_agreement": {
+    "HDF": {
+      "label_count": 115,
+      "rule_count": 115,
+      "label_and_rule": 115,
+      "label_not_rule": 0,
+      "rule_not_label": 0
+    },
+    "PWF": {
+      "label_count": 95,
+      "rule_count": 95,
+      "label_and_rule": 95,
+      "label_not_rule": 0,
+      "rule_not_label": 0
+    },
+    "OSF": {
+      "label_count": 98,
+      "rule_count": 98,
+      "label_and_rule": 98,
+      "label_not_rule": 0,
+      "rule_not_label": 0
+    },
+    "TWF": {
+      "label_count": 46,
+      "rule_count": 790,
+      "label_and_rule": 43,
+      "label_not_rule": 3,
+      "rule_not_label": 747
+    }
+  },
+  "quantity_ranges": {
+    "delta_t_K": [
+      7.599999999999966,
+      12.100000000000023
+    ],
+    "speed_rpm": [
+      1168.0,
+      2886.0
+    ],
+    "torque_Nm": [
+      3.8,
+      76.6
+    ],
+    "power_W": [
+      1148.4406104462846,
+      10469.923004765633
+    ],
+    "tool_wear_min": [
+      0.0,
+      253.0
+    ],
+    "strain_minNm": [
+      0.0,
+      16497.0
+    ],
+    "product_type": [
+      0.0,
+      2.0
+    ],
+    "air_temp_K": [
+      295.3,
+      304.5
+    ],
+    "process_temp_K": [
+      305.7,
+      313.8
+    ]
+  }
+}

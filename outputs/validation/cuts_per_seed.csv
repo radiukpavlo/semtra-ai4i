@@ -1,0 +1,315 @@
+seed,method,concept,cut_minmax,cut_physical
+42,Class-reduct rulebook (predicted concepts),delta_t_K,0.1522388578,8.285074860099975
+42,Class-reduct rulebook (predicted concepts),delta_t_K,0.2217726933,8.597977119849979
+42,Class-reduct rulebook (predicted concepts),delta_t_K,0.2661122503,8.79750512634998
+42,Class-reduct rulebook (predicted concepts),speed_rpm,0.13683607,1403.08436826
+42,Class-reduct rulebook (predicted concepts),speed_rpm,0.1382485476,1405.5110047768
+42,Class-reduct rulebook (predicted concepts),speed_rpm,0.6212601972,2235.3250187896
+42,Class-reduct rulebook (predicted concepts),torque_Nm,0.1792463055,16.8491310404
+42,Class-reduct rulebook (predicted concepts),torque_Nm,0.6234776545,49.189173247599996
+42,Class-reduct rulebook (predicted concepts),torque_Nm,0.8096300811,62.74106990407999
+42,Class-reduct rulebook (predicted concepts),power_W,0.6841315929,7363.578437063878
+42,Class-reduct rulebook (predicted concepts),power_W,0.83512752,8735.332801171395
+42,Class-reduct rulebook (predicted concepts),power_W,0.868878603,9041.951637108228
+42,Class-reduct rulebook (predicted concepts),tool_wear_min,0.7070126586,177.46017730859998
+42,Class-reduct rulebook (predicted concepts),tool_wear_min,0.7663650287,192.3576222037
+42,Class-reduct rulebook (predicted concepts),tool_wear_min,0.8575187534,215.23720710339998
+42,Class-reduct rulebook (predicted concepts),strain_minNm,0.7183506585,9914.101108090199
+42,Class-reduct rulebook (predicted concepts),strain_minNm,0.7867310524,10857.832600382879
+42,Class-reduct rulebook (predicted concepts),strain_minNm,0.8161505759,11263.857328111078
+42,Class-reduct rulebook (predicted concepts),product_type,0.0509099298,0.1018198596
+42,Class-reduct rulebook (predicted concepts),product_type,0.4277384426,0.8554768852
+42,Class-reduct rulebook (predicted concepts),product_type,0.9369794212,1.8739588424
+42,Class-reduct rulebook (predicted concepts),air_temp_K,0.6859357451,301.54201528041
+42,Class-reduct rulebook (predicted concepts),air_temp_K,0.9338510024,303.79804412184
+42,Class-reduct rulebook (predicted concepts),process_temp_K,0.4814796442,309.5518371536
+42,Class-reduct rulebook (predicted concepts),process_temp_K,0.5426113238,310.0408905904
+42,Class-reduct rulebook (predicted concepts),process_temp_K,0.8145616781,312.2164934248
+42,Class-reduct rulebook (predicted concepts),noise_sensor,0.4914811244,48.51982232140084
+42,Class-reduct rulebook (predicted concepts),noise_sensor,0.5392481127,52.11267451989697
+42,Class-reduct rulebook (predicted concepts),noise_sensor,0.5496695762,52.8965375889346
+42,Class-reduct rulebook (true concepts),delta_t_K,0.1555555556,8.300000000199974
+42,Class-reduct rulebook (true concepts),delta_t_K,0.2222222222,8.599999999899978
+42,Class-reduct rulebook (true concepts),speed_rpm,0.0733410943,1294.0000000074
+42,Class-reduct rulebook (true concepts),speed_rpm,0.1228172293,1378.9999999374
+42,Class-reduct rulebook (true concepts),speed_rpm,0.603410943,2204.660000074
+42,Class-reduct rulebook (true concepts),torque_Nm,0.1785714286,16.80000000208
+42,Class-reduct rulebook (true concepts),torque_Nm,0.7142857143,55.80000000104
+42,Class-reduct rulebook (true concepts),torque_Nm,0.8423827357,65.12546315896
+42,Class-reduct rulebook (true concepts),power_W,0.3012579796,3885.2822999895347
+42,Class-reduct rulebook (true concepts),power_W,0.8321216079,8708.024958367345
+42,Class-reduct rulebook (true concepts),power_W,0.8646985796,9003.977332428976
+42,Class-reduct rulebook (true concepts),tool_wear_min,0.7490039841,188.0000000091
+42,Class-reduct rulebook (true concepts),tool_wear_min,0.8505976096,213.5000000096
+42,Class-reduct rulebook (true concepts),strain_minNm,0.4514824798,6231.000000215759
+42,Class-reduct rulebook (true concepts),strain_minNm,0.7967297771,10995.826999712519
+42,Class-reduct rulebook (true concepts),strain_minNm,0.8664862476,11958.55000037712
+42,Class-reduct rulebook (true concepts),product_type,0.25,0.5
+42,Class-reduct rulebook (true concepts),air_temp_K,0.6648351648,301.34999999968
+42,Class-reduct rulebook (true concepts),air_temp_K,0.9285714286,303.75000000026
+42,Class-reduct rulebook (true concepts),process_temp_K,0.40625,308.95
+42,Class-reduct rulebook (true concepts),process_temp_K,0.51875,309.84999999999997
+42,Class-reduct rulebook (true concepts),process_temp_K,0.81875,312.25
+42,CART,strain_minNm,,6894.710278
+42,CART,strain_minNm,,8610.612639
+42,CART,strain_minNm,,10639.737209
+42,CART,strain_minNm,,11132.694557
+42,CART,power_W,,9024.234323
+42,CART,speed_rpm,,1376.965034
+42,CART,speed_rpm,,1413.194123
+42,CART,speed_rpm,,2507.306147
+42,CART,delta_t_K,,8.589869
+42,CART,delta_t_K,,9.834286
+42,CART,tool_wear_min,,212.074287
+42,CART,product_type,,0.614894
+43,Class-reduct rulebook (predicted concepts),delta_t_K,0.0316869737,7.742591381649968
+43,Class-reduct rulebook (predicted concepts),delta_t_K,0.2114075545,8.551333995249978
+43,Class-reduct rulebook (predicted concepts),delta_t_K,0.2719920194,8.82396408729998
+43,Class-reduct rulebook (predicted concepts),speed_rpm,0.0820313735,1308.929899673
+43,Class-reduct rulebook (predicted concepts),speed_rpm,0.1320030519,1394.7812431642
+43,Class-reduct rulebook (predicted concepts),speed_rpm,0.6168737757,2227.7891466526
+43,Class-reduct rulebook (predicted concepts),torque_Nm,0.1776773423,16.73491051944
+43,Class-reduct rulebook (predicted concepts),torque_Nm,0.7518990277,58.53824921656
+43,Class-reduct rulebook (predicted concepts),torque_Nm,0.853820249,65.95811412719999
+43,Class-reduct rulebook (predicted concepts),power_W,0.3027169621,3845.552608715732
+43,Class-reduct rulebook (predicted concepts),power_W,0.8562927467,8777.737050045005
+43,Class-reduct rulebook (predicted concepts),power_W,0.885114193,9034.526983730748
+43,Class-reduct rulebook (predicted concepts),tool_wear_min,0.7006712259,175.8684777009
+43,Class-reduct rulebook (predicted concepts),tool_wear_min,0.7690757739,193.0380192489
+43,Class-reduct rulebook (predicted concepts),tool_wear_min,0.8188775544,205.5382661544
+43,Class-reduct rulebook (predicted concepts),strain_minNm,0.5580772717,7702.136042186039
+43,Class-reduct rulebook (predicted concepts),strain_minNm,0.8008703011,11052.97119954132
+43,Class-reduct rulebook (predicted concepts),strain_minNm,0.8123983741,11212.07244062892
+43,Class-reduct rulebook (predicted concepts),product_type,0.0400605938,0.0801211876
+43,Class-reduct rulebook (predicted concepts),product_type,0.3943554704,0.7887109408
+43,Class-reduct rulebook (predicted concepts),product_type,0.434698568,0.869397136
+43,Class-reduct rulebook (predicted concepts),air_temp_K,0.6368780405,301.09559016854996
+43,Class-reduct rulebook (predicted concepts),air_temp_K,0.6948550215,301.62318069565
+43,Class-reduct rulebook (predicted concepts),air_temp_K,0.9359260277,303.81692685206997
+43,Class-reduct rulebook (predicted concepts),process_temp_K,0.3038032441,308.16080627721
+43,Class-reduct rulebook (predicted concepts),process_temp_K,0.5233750212,309.93933767172
+43,Class-reduct rulebook (predicted concepts),process_temp_K,0.7859232903,312.06597865143
+43,Class-reduct rulebook (predicted concepts),noise_sensor,0.4776634753,47.4805110163801
+43,Class-reduct rulebook (predicted concepts),noise_sensor,0.5270693028,51.1966305011812
+43,Class-reduct rulebook (predicted concepts),noise_sensor,0.5408000782,52.229407495056414
+43,Class-reduct rulebook (true concepts),delta_t_K,0.0222222222,7.699999999899967
+43,Class-reduct rulebook (true concepts),delta_t_K,0.2222222222,8.599999999899978
+43,Class-reduct rulebook (true concepts),speed_rpm,0.0739231665,1295.000000047
+43,Class-reduct rulebook (true concepts),speed_rpm,0.1228172293,1378.9999999374
+43,Class-reduct rulebook (true concepts),speed_rpm,0.6105355064,2216.8999999952002
+43,Class-reduct rulebook (true concepts),torque_Nm,0.1758241758,16.59999999824
+43,Class-reduct rulebook (true concepts),torque_Nm,0.7142857143,55.80000000104
+43,Class-reduct rulebook (true concepts),torque_Nm,0.853021978,65.8999999984
+43,Class-reduct rulebook (true concepts),power_W,0.3030075739,3848.141867563935
+43,Class-reduct rulebook (true concepts),power_W,0.8554148743,8769.915485747568
+43,Class-reduct rulebook (true concepts),power_W,0.8818264199,9005.233969510196
+43,Class-reduct rulebook (true concepts),tool_wear_min,0.7370517928,184.99999999279999
+43,Class-reduct rulebook (true concepts),tool_wear_min,0.8147410359,204.5000000109
+43,Class-reduct rulebook (true concepts),strain_minNm,0.5354370192,7389.673389383039
+43,Class-reduct rulebook (true concepts),strain_minNm,0.8009054285,11053.4559998142
+43,Class-reduct rulebook (true concepts),strain_minNm,0.8609613657,11882.30000029884
+43,Class-reduct rulebook (true concepts),product_type,0.25,0.5
+43,Class-reduct rulebook (true concepts),air_temp_K,0.6978021978,301.64999999997997
+43,Class-reduct rulebook (true concepts),air_temp_K,0.9285714286,303.75000000026
+43,Class-reduct rulebook (true concepts),process_temp_K,0.2901234568,308.05000000008
+43,Class-reduct rulebook (true concepts),process_temp_K,0.512345679,309.8499999999
+43,Class-reduct rulebook (true concepts),process_temp_K,0.7962962963,312.15000000003
+43,CART,strain_minNm,,8640.302893
+43,CART,strain_minNm,,11149.990873
+43,CART,power_W,,8863.788769
+43,CART,power_W,,9034.526983
+43,CART,speed_rpm,,1361.825066
+43,CART,speed_rpm,,1392.949706
+43,CART,speed_rpm,,1422.700128
+43,CART,speed_rpm,,1817.801658
+43,CART,speed_rpm,,2441.085201
+43,CART,delta_t_K,,8.488823
+43,CART,delta_t_K,,9.811141
+43,CART,air_temp_K,,303.688182
+43,CART,tool_wear_min,,204.881509
+43,CART,noise_sensor,,46.801917
+43,CART,product_type,,0.481364
+44,Class-reduct rulebook (predicted concepts),delta_t_K,0.1803470836,8.411561876199976
+44,Class-reduct rulebook (predicted concepts),delta_t_K,0.2423596772,8.69061854739998
+44,Class-reduct rulebook (predicted concepts),speed_rpm,0.0796923258,1316.875415489
+44,Class-reduct rulebook (predicted concepts),speed_rpm,0.1174347546,1381.226256593
+44,Class-reduct rulebook (predicted concepts),speed_rpm,0.6099992609,2221.0487398345003
+44,Class-reduct rulebook (predicted concepts),torque_Nm,0.162929529,15.6612697112
+44,Class-reduct rulebook (predicted concepts),torque_Nm,0.7220463177,56.364971928559996
+44,Class-reduct rulebook (predicted concepts),torque_Nm,0.8227779997,63.69823837815999
+44,Class-reduct rulebook (predicted concepts),power_W,0.7224925114,7624.599084423769
+44,Class-reduct rulebook (predicted concepts),power_W,0.8524464291,8789.458445676699
+44,Class-reduct rulebook (predicted concepts),power_W,0.8950416148,9171.266102460806
+44,Class-reduct rulebook (predicted concepts),tool_wear_min,0.7037894603,176.6511545353
+44,Class-reduct rulebook (predicted concepts),tool_wear_min,0.7941799717,199.3391728967
+44,Class-reduct rulebook (predicted concepts),tool_wear_min,0.8779646811,220.3691349561
+44,Class-reduct rulebook (predicted concepts),strain_minNm,0.6806587101,9393.90698983212
+44,Class-reduct rulebook (predicted concepts),strain_minNm,0.8095561278,11172.846030993358
+44,Class-reduct rulebook (predicted concepts),strain_minNm,0.8267799616,11410.555606033919
+44,Class-reduct rulebook (predicted concepts),product_type,0.0759471439,0.1518942878
+44,Class-reduct rulebook (predicted concepts),product_type,0.4288415515,0.857683103
+44,Class-reduct rulebook (predicted concepts),product_type,0.9405796043,1.8811592086
+44,Class-reduct rulebook (predicted concepts),air_temp_K,0.677430289,301.5323586588
+44,Class-reduct rulebook (predicted concepts),air_temp_K,0.8694927235,303.2993330562
+44,Class-reduct rulebook (predicted concepts),process_temp_K,0.3427547677,308.47631361837
+44,Class-reduct rulebook (predicted concepts),process_temp_K,0.5222368982,309.93011887542
+44,Class-reduct rulebook (predicted concepts),process_temp_K,0.8115121525,312.27324843525
+44,Class-reduct rulebook (predicted concepts),noise_sensor,0.4953587653,48.81148380411867
+44,Class-reduct rulebook (predicted concepts),noise_sensor,0.5332225479,51.65945432516971
+44,Class-reduct rulebook (predicted concepts),noise_sensor,0.5418339127,52.30716861603976
+44,Class-reduct rulebook (true concepts),delta_t_K,0.1555555556,8.300000000199974
+44,Class-reduct rulebook (true concepts),delta_t_K,0.2222222222,8.599999999899978
+44,Class-reduct rulebook (true concepts),speed_rpm,0.0674486804,1296.000000082
+44,Class-reduct rulebook (true concepts),speed_rpm,0.1167155425,1379.9999999625
+44,Class-reduct rulebook (true concepts),speed_rpm,0.6074134897,2216.6399999385003
+44,Class-reduct rulebook (true concepts),torque_Nm,0.1744505495,16.5000000036
+44,Class-reduct rulebook (true concepts),torque_Nm,0.717032967,55.99999999759999
+44,Class-reduct rulebook (true concepts),torque_Nm,0.8685274725,67.028799998
+44,Class-reduct rulebook (true concepts),power_W,0.2954863289,3797.071928634136
+44,Class-reduct rulebook (true concepts),power_W,0.8502661794,8769.915485234545
+44,Class-reduct rulebook (true concepts),power_W,0.8763785626,9003.977332337625
+44,Class-reduct rulebook (true concepts),tool_wear_min,0.6812749004,171.0000000004
+44,Class-reduct rulebook (true concepts),tool_wear_min,0.7928286853,199.0000000103
+44,Class-reduct rulebook (true concepts),tool_wear_min,0.8984063745,225.4999999995
+44,Class-reduct rulebook (true concepts),strain_minNm,0.5532570623,7635.61136821476
+44,Class-reduct rulebook (true concepts),strain_minNm,0.8030159696,11082.583999643519
+44,Class-reduct rulebook (true concepts),strain_minNm,0.8677252703,11975.650000464359
+44,Class-reduct rulebook (true concepts),product_type,0.25,0.5
+44,Class-reduct rulebook (true concepts),air_temp_K,0.6902173913,301.64999999996
+44,Class-reduct rulebook (true concepts),air_temp_K,0.9184782609,303.75000000028
+44,Class-reduct rulebook (true concepts),process_temp_K,0.3765432099,308.75000000018997
+44,Class-reduct rulebook (true concepts),process_temp_K,0.5,309.75
+44,Class-reduct rulebook (true concepts),process_temp_K,0.8086419753,312.24999999993
+44,CART,strain_minNm,,11185.912441
+44,CART,power_W,,9015.497117
+44,CART,power_W,,9171.266102
+44,CART,speed_rpm,,1369.007646
+44,CART,speed_rpm,,2505.384052
+44,CART,delta_t_K,,8.535335
+44,CART,tool_wear_min,,220.885407
+44,CART,product_type,,0.505407
+44,CART,torque_Nm,,52.962294
+45,Class-reduct rulebook (predicted concepts),delta_t_K,0.2262641717,8.61818877264998
+45,Class-reduct rulebook (predicted concepts),delta_t_K,0.2368141123,8.665663505349979
+45,Class-reduct rulebook (predicted concepts),delta_t_K,0.2884838196,8.898177188199982
+45,Class-reduct rulebook (predicted concepts),speed_rpm,0.1024302914,1355.643646837
+45,Class-reduct rulebook (predicted concepts),speed_rpm,0.1180742904,1382.316665132
+45,Class-reduct rulebook (predicted concepts),speed_rpm,0.6091249156,2219.557981098
+45,Class-reduct rulebook (predicted concepts),torque_Nm,0.1807360315,16.885288680600002
+45,Class-reduct rulebook (predicted concepts),torque_Nm,0.7347424327,56.99535212748
+45,Class-reduct rulebook (predicted concepts),torque_Nm,0.8619266851,66.20349200124001
+45,Class-reduct rulebook (predicted concepts),power_W,0.3004265785,3841.354518149989
+45,Class-reduct rulebook (predicted concepts),power_W,0.7543675943,7910.315662761124
+45,Class-reduct rulebook (predicted concepts),power_W,0.8744221035,8986.44034893706
+45,Class-reduct rulebook (predicted concepts),tool_wear_min,0.7010993278,172.4704346388
+45,Class-reduct rulebook (predicted concepts),tool_wear_min,0.8260150909,203.1997123614
+45,Class-reduct rulebook (predicted concepts),tool_wear_min,0.9066994205,223.048057443
+45,Class-reduct rulebook (predicted concepts),strain_minNm,0.3357033569,4713.275130876001
+45,Class-reduct rulebook (predicted concepts),strain_minNm,0.7331624406,10293.600666024
+45,Class-reduct rulebook (predicted concepts),strain_minNm,0.8158291449,11454.241194396
+45,Class-reduct rulebook (predicted concepts),product_type,0.0769872637,0.1539745274
+45,Class-reduct rulebook (predicted concepts),product_type,0.4369361326,0.8738722652
+45,Class-reduct rulebook (predicted concepts),product_type,0.4843001817,0.9686003634
+45,Class-reduct rulebook (predicted concepts),air_temp_K,0.6689043673,301.38702974243
+45,Class-reduct rulebook (predicted concepts),air_temp_K,0.9093866993,303.57541896363
+45,Class-reduct rulebook (predicted concepts),process_temp_K,0.2394766186,307.63976061066
+45,Class-reduct rulebook (predicted concepts),process_temp_K,0.477457287,309.5674040247
+45,Class-reduct rulebook (predicted concepts),process_temp_K,0.7889675761,312.09063736641
+45,Class-reduct rulebook (predicted concepts),noise_sensor,0.488244418,48.27636950766909
+45,Class-reduct rulebook (predicted concepts),noise_sensor,0.523975952,50.96396035349052
+45,Class-reduct rulebook (predicted concepts),noise_sensor,0.5580461188,53.52658944205105
+45,Class-reduct rulebook (true concepts),delta_t_K,0.1555555556,8.300000000199974
+45,Class-reduct rulebook (true concepts),delta_t_K,0.2222222222,8.599999999899978
+45,Class-reduct rulebook (true concepts),speed_rpm,0.0909090909,1335.9999999845
+45,Class-reduct rulebook (true concepts),speed_rpm,0.1167155425,1379.9999999625
+45,Class-reduct rulebook (true concepts),speed_rpm,0.6098533724,2220.799999942
+45,Class-reduct rulebook (true concepts),torque_Nm,0.1777209945,16.6670000018
+45,Class-reduct rulebook (true concepts),torque_Nm,0.7140883978,55.50000000072
+45,Class-reduct rulebook (true concepts),torque_Nm,0.8577348066,65.89999999784001
+45,Class-reduct rulebook (true concepts),power_W,0.2992701329,3830.988562996182
+45,Class-reduct rulebook (true concepts),power_W,0.7329157795,7718.029445247235
+45,Class-reduct rulebook (true concepts),power_W,0.8768166309,9007.904016266471
+45,Class-reduct rulebook (true concepts),tool_wear_min,0.7032520325,172.999999995
+45,Class-reduct rulebook (true concepts),tool_wear_min,0.8008130081,196.9999999926
+45,Class-reduct rulebook (true concepts),tool_wear_min,0.912601626,224.499999996
+45,Class-reduct rulebook (true concepts),strain_minNm,0.4398281047,6175.186589988
+45,Class-reduct rulebook (true concepts),strain_minNm,0.7842763533,11011.240000332
+45,Class-reduct rulebook (true concepts),strain_minNm,0.846741453,11888.25000012
+45,Class-reduct rulebook (true concepts),product_type,0.25,0.5
+45,Class-reduct rulebook (true concepts),product_type,0.75,1.5
+45,Class-reduct rulebook (true concepts),air_temp_K,0.6868131868,301.54999999988
+45,Class-reduct rulebook (true concepts),air_temp_K,0.9175824176,303.65000000016
+45,Class-reduct rulebook (true concepts),process_temp_K,0.512345679,309.8499999999
+45,Class-reduct rulebook (true concepts),process_temp_K,0.7839506173,312.05000000013
+45,CART,strain_minNm,,10756.428802
+45,CART,strain_minNm,,11457.910123
+45,CART,power_W,,8978.425431
+45,CART,power_W,,9219.267703
+45,CART,speed_rpm,,1368.148672
+45,CART,speed_rpm,,2492.987011
+45,CART,delta_t_K,,8.617945
+45,CART,tool_wear_min,,226.188142
+45,CART,process_temp_K,,310.083113
+45,CART,product_type,,0.474303
+45,CART,noise_sensor,,50.500532
+46,Class-reduct rulebook (predicted concepts),delta_t_K,0.0220577873,7.699260042849967
+46,Class-reduct rulebook (predicted concepts),delta_t_K,0.2184720361,8.583124162449979
+46,Class-reduct rulebook (predicted concepts),delta_t_K,0.3017126658,8.957706996099983
+46,Class-reduct rulebook (predicted concepts),speed_rpm,0.0685292998,1285.7333370564
+46,Class-reduct rulebook (predicted concepts),speed_rpm,0.1227031195,1378.803959301
+46,Class-reduct rulebook (predicted concepts),speed_rpm,0.6333986712,2256.1789171216
+46,Class-reduct rulebook (predicted concepts),torque_Nm,0.1718301955,16.240506154200002
+46,Class-reduct rulebook (predicted concepts),torque_Nm,0.6589476841,51.507812328840004
+46,Class-reduct rulebook (predicted concepts),torque_Nm,0.8263639635,63.6287509574
+46,Class-reduct rulebook (predicted concepts),power_W,0.3038594747,3866.5254076070323
+46,Class-reduct rulebook (predicted concepts),power_W,0.8512916243,8763.417317177586
+46,Class-reduct rulebook (predicted concepts),power_W,0.9329572618,9493.933052974027
+46,Class-reduct rulebook (predicted concepts),tool_wear_min,0.7455604341,187.13566895909997
+46,Class-reduct rulebook (predicted concepts),tool_wear_min,0.8131517996,204.10110169959998
+46,Class-reduct rulebook (predicted concepts),strain_minNm,0.4600831474,6459.567389496
+46,Class-reduct rulebook (predicted concepts),strain_minNm,0.7370737368,10348.515264672
+46,Class-reduct rulebook (predicted concepts),strain_minNm,0.7749495856,10880.292181824001
+46,Class-reduct rulebook (predicted concepts),product_type,0.0642741111,0.1285482222
+46,Class-reduct rulebook (predicted concepts),product_type,0.4454163395,0.890832679
+46,Class-reduct rulebook (predicted concepts),product_type,0.9331571361,1.8663142722
+46,Class-reduct rulebook (predicted concepts),air_temp_K,0.594705114,300.7118165374
+46,Class-reduct rulebook (predicted concepts),air_temp_K,0.691848298,301.59581951179996
+46,Class-reduct rulebook (predicted concepts),air_temp_K,0.9337479882,303.79710669262
+46,Class-reduct rulebook (predicted concepts),process_temp_K,0.2405745243,307.6245961944
+46,Class-reduct rulebook (predicted concepts),process_temp_K,0.5319545987,309.95563678959996
+46,Class-reduct rulebook (predicted concepts),process_temp_K,0.8294642286,312.3357138288
+46,Class-reduct rulebook (predicted concepts),noise_sensor,0.5133949701,50.152623372728776
+46,Class-reduct rulebook (predicted concepts),noise_sensor,0.5291516911,51.33730936890185
+46,Class-reduct rulebook (predicted concepts),noise_sensor,0.542771525,52.36133121275713
+46,Class-reduct rulebook (true concepts),delta_t_K,0.1555555556,8.300000000199974
+46,Class-reduct rulebook (true concepts),delta_t_K,0.2222222222,8.599999999899978
+46,Class-reduct rulebook (true concepts),speed_rpm,0.0733410943,1294.0000000074
+46,Class-reduct rulebook (true concepts),speed_rpm,0.1228172293,1378.9999999374
+46,Class-reduct rulebook (true concepts),speed_rpm,0.6274505239,2245.9600000602
+46,Class-reduct rulebook (true concepts),torque_Nm,0.1714917127,16.21599999948
+46,Class-reduct rulebook (true concepts),torque_Nm,0.6681272172,52.17241052528
+46,Class-reduct rulebook (true concepts),torque_Nm,0.8122175051,62.60454736924
+46,Class-reduct rulebook (true concepts),power_W,0.2974473779,3809.1678977014735
+46,Class-reduct rulebook (true concepts),power_W,0.8401292431,8663.567547247627
+46,Class-reduct rulebook (true concepts),power_W,0.8781842511,9003.977333063105
+46,Class-reduct rulebook (true concepts),tool_wear_min,0.7330677291,184.0000000041
+46,Class-reduct rulebook (true concepts),tool_wear_min,0.8047808765,202.00000000149998
+46,Class-reduct rulebook (true concepts),tool_wear_min,0.8984063745,225.4999999995
+46,Class-reduct rulebook (true concepts),strain_minNm,0.4704390688,6604.964525952
+46,Class-reduct rulebook (true concepts),strain_minNm,0.7893309117,11082.206000268001
+46,Class-reduct rulebook (true concepts),strain_minNm,0.8517485755,11958.55000002
+46,Class-reduct rulebook (true concepts),product_type,0.25,0.5
+46,Class-reduct rulebook (true concepts),air_temp_K,0.6868131868,301.54999999988
+46,Class-reduct rulebook (true concepts),air_temp_K,0.9175824176,303.65000000016
+46,Class-reduct rulebook (true concepts),process_temp_K,0.51875,309.84999999999997
+46,Class-reduct rulebook (true concepts),process_temp_K,0.81875,312.25
+46,CART,strain_minNm,,10880.264493
+46,CART,strain_minNm,,10999.49333
+46,CART,power_W,,8997.290047
+46,CART,power_W,,9493.933053
+46,CART,speed_rpm,,1377.042097
+46,CART,speed_rpm,,2510.714147
+46,CART,delta_t_K,,8.601552
+46,CART,tool_wear_min,,204.847631
+46,CART,product_type,,0.55198
+46,CART,noise_sensor,,49.895331

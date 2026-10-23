@@ -1,0 +1,226 @@
+seed,method,mode,concept,documented,nearest_cut,abs_error,rel_error,concepts_used,concept_jaccard
+42,Class-reduct rulebook (predicted concepts),HDF,delta_t_K,8.6,8.597977119849979,0.0020228801500206117,0.0004495289222267969,,0.0
+42,Class-reduct rulebook (predicted concepts),HDF,speed_rpm,1380.0,1403.08436826,23.08436826000002,0.013436768486612351,,0.0
+42,Class-reduct rulebook (predicted concepts),PWF,power_W,3500.0,7363.578437063878,3863.5784370638776,0.42528358086003787,power_W,1.0
+42,Class-reduct rulebook (predicted concepts),PWF,power_W,9000.0,9041.951637108228,41.95163710822817,0.004617828456949001,power_W,1.0
+42,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,11000.0,10857.832600382879,142.1673996171212,0.01030108973256827,strain_minNm,0.5
+42,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,12000.0,11263.857328111078,736.1426718889215,0.05333903369916541,strain_minNm,0.5
+42,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,13000.0,11263.857328111078,1736.1426718889215,0.12579650116576252,strain_minNm,0.5
+42,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,200.0,192.3576222037,7.642377796299996,0.03044772030398405,,0.0
+42,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,240.0,215.23720710339998,24.76279289660002,0.09865654540478094,,0.0
+42,Class-reduct rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+42,Class-reduct rulebook (true concepts),HDF,speed_rpm,1380.0,1378.9999999374,1.0000000626000656,0.0005820722133876982,delta_t_K;speed_rpm,1.0
+42,Class-reduct rulebook (true concepts),PWF,power_W,3500.0,3885.2822999895347,385.28229998953475,0.04240996756003782,power_W,1.0
+42,Class-reduct rulebook (true concepts),PWF,power_W,9000.0,9003.977332428976,3.977332428976297,0.0004378050569490291,power_W,1.0
+42,Class-reduct rulebook (true concepts),OSF,strain_minNm,11000.0,10995.826999712519,4.173000287481045,0.0003023650325682582,product_type;strain_minNm,1.0
+42,Class-reduct rulebook (true concepts),OSF,strain_minNm,12000.0,11958.55000037712,41.44999962288057,0.0030033619991653316,product_type;strain_minNm,1.0
+42,Class-reduct rulebook (true concepts),OSF,strain_minNm,13000.0,11958.55000037712,1041.4499996228806,0.07546082946576245,product_type;strain_minNm,1.0
+42,Class-reduct rulebook (true concepts),TWF,tool_wear_min,200.0,188.0000000091,11.999999990899994,0.04780876490398404,,0.0
+42,Class-reduct rulebook (true concepts),TWF,tool_wear_min,240.0,213.5000000096,26.4999999904,0.10557768920478088,,0.0
+42,MAKE rulebook (predicted concepts),HDF,delta_t_K,8.6,8.597977119849979,0.0020228801500206117,0.0004495289222267969,air_temp_K;process_temp_K;speed_rpm;strain_minNm,0.2
+42,MAKE rulebook (predicted concepts),HDF,speed_rpm,1380.0,1403.08436826,23.08436826000002,0.013436768486612351,air_temp_K;process_temp_K;speed_rpm;strain_minNm,0.2
+42,MAKE rulebook (predicted concepts),PWF,power_W,3500.0,7363.578437063878,3863.5784370638776,0.42528358086003787,power_W,1.0
+42,MAKE rulebook (predicted concepts),PWF,power_W,9000.0,9041.951637108228,41.95163710822817,0.004617828456949001,power_W,1.0
+42,MAKE rulebook (predicted concepts),OSF,strain_minNm,11000.0,10857.832600382879,142.1673996171212,0.01030108973256827,strain_minNm,0.5
+42,MAKE rulebook (predicted concepts),OSF,strain_minNm,12000.0,11263.857328111078,736.1426718889215,0.05333903369916541,strain_minNm,0.5
+42,MAKE rulebook (predicted concepts),OSF,strain_minNm,13000.0,11263.857328111078,1736.1426718889215,0.12579650116576252,strain_minNm,0.5
+42,MAKE rulebook (predicted concepts),TWF,tool_wear_min,200.0,192.3576222037,7.642377796299996,0.03044772030398405,noise_sensor;power_W;tool_wear_min;torque_Nm,0.25
+42,MAKE rulebook (predicted concepts),TWF,tool_wear_min,240.0,215.23720710339998,24.76279289660002,0.09865654540478094,noise_sensor;power_W;tool_wear_min;torque_Nm,0.25
+42,MAKE rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+42,MAKE rulebook (true concepts),HDF,speed_rpm,1380.0,1378.9999999374,1.0000000626000656,0.0005820722133876982,delta_t_K;speed_rpm,1.0
+42,MAKE rulebook (true concepts),PWF,power_W,3500.0,3885.2822999895347,385.28229998953475,0.04240996756003782,power_W,1.0
+42,MAKE rulebook (true concepts),PWF,power_W,9000.0,9003.977332428976,3.977332428976297,0.0004378050569490291,power_W,1.0
+42,MAKE rulebook (true concepts),OSF,strain_minNm,11000.0,10995.826999712519,4.173000287481045,0.0003023650325682582,strain_minNm,0.5
+42,MAKE rulebook (true concepts),OSF,strain_minNm,12000.0,11958.55000037712,41.44999962288057,0.0030033619991653316,strain_minNm,0.5
+42,MAKE rulebook (true concepts),OSF,strain_minNm,13000.0,11958.55000037712,1041.4499996228806,0.07546082946576245,strain_minNm,0.5
+42,MAKE rulebook (true concepts),TWF,tool_wear_min,200.0,188.0000000091,11.999999990899994,0.04780876490398404,delta_t_K;power_W;speed_rpm;torque_Nm,0.0
+42,MAKE rulebook (true concepts),TWF,tool_wear_min,240.0,213.5000000096,26.4999999904,0.10557768920478088,delta_t_K;power_W;speed_rpm;torque_Nm,0.0
+42,CART,HDF,delta_t_K,8.6,8.589869,0.010130999999999446,0.0022513333333331817,delta_t_K;power_W;speed_rpm;strain_minNm,0.5
+42,CART,HDF,speed_rpm,1380.0,1376.965034,3.0349659999999403,0.0017665692665890223,delta_t_K;power_W;speed_rpm;strain_minNm,0.5
+42,CART,PWF,power_W,3500.0,9024.234323,5524.234323000001,0.6080803567639655,power_W;speed_rpm;strain_minNm,0.3333333333333333
+42,CART,PWF,power_W,9000.0,9024.234323,24.234323000000586,0.0026675942608768177,power_W;speed_rpm;strain_minNm,0.3333333333333333
+42,CART,OSF,strain_minNm,11000.0,11132.694557,132.6945570000007,0.009614711546822068,delta_t_K;power_W;product_type;speed_rpm;strain_minNm,0.4
+42,CART,OSF,strain_minNm,12000.0,11132.694557,867.3054429999993,0.06284275591977505,delta_t_K;power_W;product_type;speed_rpm;strain_minNm,0.4
+42,CART,OSF,strain_minNm,13000.0,11132.694557,1867.3054429999993,0.13530022338637215,delta_t_K;power_W;product_type;speed_rpm;strain_minNm,0.4
+42,CART,TWF,tool_wear_min,200.0,212.074287,12.074286999999998,0.04810472908366533,,0.0
+42,CART,TWF,tool_wear_min,240.0,212.074287,27.925713000000002,0.11125782071713149,,0.0
+43,Class-reduct rulebook (predicted concepts),HDF,delta_t_K,8.6,8.551333995249978,0.048666004750021585,0.010814667722226882,,0.0
+43,Class-reduct rulebook (predicted concepts),HDF,speed_rpm,1380.0,1394.7812431642,14.781243164200077,0.008603750386612385,,0.0
+43,Class-reduct rulebook (predicted concepts),PWF,power_W,3500.0,3845.552608715732,345.5526087157318,0.038783942240171704,power_W,1.0
+43,Class-reduct rulebook (predicted concepts),PWF,power_W,9000.0,9034.526983730748,34.526983730747816,0.003875220469952444,power_W,1.0
+43,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,11000.0,11052.97119954132,52.97119954131995,0.003838158967431814,product_type;strain_minNm,1.0
+43,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,12000.0,11212.07244062892,787.9275593710809,0.05709123549916536,product_type;strain_minNm,1.0
+43,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,13000.0,11212.07244062892,1787.9275593710809,0.12954870296576246,product_type;strain_minNm,1.0
+43,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,200.0,205.5382661544,5.538266154399992,0.022064805396015904,,0.0
+43,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,240.0,205.5382661544,34.46173384560001,0.1372977444047809,,0.0
+43,Class-reduct rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+43,Class-reduct rulebook (true concepts),HDF,speed_rpm,1380.0,1378.9999999374,1.0000000626000656,0.0005820722133876982,delta_t_K;speed_rpm,1.0
+43,Class-reduct rulebook (true concepts),PWF,power_W,3500.0,3848.141867563935,348.1418675639352,0.0390745540401717,power_W,1.0
+43,Class-reduct rulebook (true concepts),PWF,power_W,9000.0,9005.233969510196,5.2339695101964026,0.0005874473699524857,power_W,1.0
+43,Class-reduct rulebook (true concepts),OSF,strain_minNm,11000.0,11053.4559998142,53.45599981419946,0.0038732863674317787,product_type;strain_minNm,1.0
+43,Class-reduct rulebook (true concepts),OSF,strain_minNm,12000.0,11882.30000029884,117.69999970116078,0.008528243899165348,product_type;strain_minNm,1.0
+43,Class-reduct rulebook (true concepts),OSF,strain_minNm,13000.0,11882.30000029884,1117.6999997011608,0.08098571136576246,product_type;strain_minNm,1.0
+43,Class-reduct rulebook (true concepts),TWF,tool_wear_min,200.0,204.5000000109,4.50000001090001,0.017928286896015975,,0.0
+43,Class-reduct rulebook (true concepts),TWF,tool_wear_min,240.0,204.5000000109,35.49999998909999,0.14143426290478084,,0.0
+43,MAKE rulebook (predicted concepts),HDF,delta_t_K,8.6,8.551333995249978,0.048666004750021585,0.010814667722226882,air_temp_K;delta_t_K;speed_rpm,0.6666666666666666
+43,MAKE rulebook (predicted concepts),HDF,speed_rpm,1380.0,1394.7812431642,14.781243164200077,0.008603750386612385,air_temp_K;delta_t_K;speed_rpm,0.6666666666666666
+43,MAKE rulebook (predicted concepts),PWF,power_W,3500.0,3845.552608715732,345.5526087157318,0.038783942240171704,power_W,1.0
+43,MAKE rulebook (predicted concepts),PWF,power_W,9000.0,9034.526983730748,34.526983730747816,0.003875220469952444,power_W,1.0
+43,MAKE rulebook (predicted concepts),OSF,strain_minNm,11000.0,11052.97119954132,52.97119954131995,0.003838158967431814,strain_minNm,0.5
+43,MAKE rulebook (predicted concepts),OSF,strain_minNm,12000.0,11212.07244062892,787.9275593710809,0.05709123549916536,strain_minNm,0.5
+43,MAKE rulebook (predicted concepts),OSF,strain_minNm,13000.0,11212.07244062892,1787.9275593710809,0.12954870296576246,strain_minNm,0.5
+43,MAKE rulebook (predicted concepts),TWF,tool_wear_min,200.0,205.5382661544,5.538266154399992,0.022064805396015904,delta_t_K;power_W;tool_wear_min;torque_Nm,0.25
+43,MAKE rulebook (predicted concepts),TWF,tool_wear_min,240.0,205.5382661544,34.46173384560001,0.1372977444047809,delta_t_K;power_W;tool_wear_min;torque_Nm,0.25
+43,MAKE rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+43,MAKE rulebook (true concepts),HDF,speed_rpm,1380.0,1378.9999999374,1.0000000626000656,0.0005820722133876982,delta_t_K;speed_rpm,1.0
+43,MAKE rulebook (true concepts),PWF,power_W,3500.0,3848.141867563935,348.1418675639352,0.0390745540401717,power_W,1.0
+43,MAKE rulebook (true concepts),PWF,power_W,9000.0,9005.233969510196,5.2339695101964026,0.0005874473699524857,power_W,1.0
+43,MAKE rulebook (true concepts),OSF,strain_minNm,11000.0,11053.4559998142,53.45599981419946,0.0038732863674317787,delta_t_K;strain_minNm,0.3333333333333333
+43,MAKE rulebook (true concepts),OSF,strain_minNm,12000.0,11882.30000029884,117.69999970116078,0.008528243899165348,delta_t_K;strain_minNm,0.3333333333333333
+43,MAKE rulebook (true concepts),OSF,strain_minNm,13000.0,11882.30000029884,1117.6999997011608,0.08098571136576246,delta_t_K;strain_minNm,0.3333333333333333
+43,MAKE rulebook (true concepts),TWF,tool_wear_min,200.0,204.5000000109,4.50000001090001,0.017928286896015975,delta_t_K;power_W;tool_wear_min;torque_Nm,0.25
+43,MAKE rulebook (true concepts),TWF,tool_wear_min,240.0,204.5000000109,35.49999998909999,0.14143426290478084,delta_t_K;power_W;tool_wear_min;torque_Nm,0.25
+43,CART,HDF,delta_t_K,8.6,8.488823,0.11117699999999964,0.024705999999999607,air_temp_K;delta_t_K;power_W;speed_rpm;strain_minNm,0.4
+43,CART,HDF,speed_rpm,1380.0,1392.949706,12.949706000000106,0.0075376635622817845,air_temp_K;delta_t_K;power_W;speed_rpm;strain_minNm,0.4
+43,CART,PWF,power_W,3500.0,8863.788769,5363.788769000001,0.6020179519944306,delta_t_K;power_W;speed_rpm;strain_minNm,0.25
+43,CART,PWF,power_W,9000.0,9034.526983,34.526982999999746,0.003875220387935147,delta_t_K;power_W;speed_rpm;strain_minNm,0.25
+43,CART,OSF,strain_minNm,11000.0,11149.990873,149.99087300000065,0.010867958800684046,product_type;strain_minNm,1.0
+43,CART,OSF,strain_minNm,12000.0,11149.990873,850.0091269999994,0.06158950866591307,product_type;strain_minNm,1.0
+43,CART,OSF,strain_minNm,13000.0,11149.990873,1850.0091269999994,0.13404697613251018,product_type;strain_minNm,1.0
+43,CART,TWF,tool_wear_min,200.0,204.881509,4.881508999999994,0.01944824302788842,,0.0
+43,CART,TWF,tool_wear_min,240.0,204.881509,35.118491000000006,0.1399143067729084,,0.0
+44,Class-reduct rulebook (predicted concepts),HDF,delta_t_K,8.6,8.69061854739998,0.09061854739998054,0.0201374549777732,delta_t_K;speed_rpm,1.0
+44,Class-reduct rulebook (predicted concepts),HDF,speed_rpm,1380.0,1381.226256593,1.2262565930000164,0.0007192120780058748,delta_t_K;speed_rpm,1.0
+44,Class-reduct rulebook (predicted concepts),PWF,power_W,3500.0,7624.599084423769,4124.599084423769,0.46014808979701166,power_W,1.0
+44,Class-reduct rulebook (predicted concepts),PWF,power_W,9000.0,9171.266102460806,171.266102460806,0.019106770932459986,power_W,1.0
+44,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,11000.0,11172.846030993358,172.846030993358,0.012523985667431674,product_type;strain_minNm,1.0
+44,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,12000.0,11410.555606033919,589.4443939660814,0.04270964799916539,product_type;strain_minNm,1.0
+44,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,13000.0,11410.555606033919,1589.4443939660814,0.11516711546576251,product_type;strain_minNm,1.0
+44,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,200.0,199.3391728967,0.6608271032999937,0.0026327773039840387,,0.0
+44,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,240.0,220.3691349561,19.630865043900002,0.07821061770478088,,0.0
+44,Class-reduct rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+44,Class-reduct rulebook (true concepts),HDF,speed_rpm,1380.0,1379.9999999625,3.7500058169825934e-08,2.1994169014560666e-11,delta_t_K;speed_rpm,1.0
+44,Class-reduct rulebook (true concepts),PWF,power_W,3500.0,3797.071928634136,297.07192863413593,0.03314190729701168,power_W,1.0
+44,Class-reduct rulebook (true concepts),PWF,power_W,9000.0,9003.977332337625,3.97733233762483,0.00044371873245994107,power_W,1.0
+44,Class-reduct rulebook (true concepts),OSF,strain_minNm,11000.0,11082.583999643519,82.58399964351884,0.005983827467431734,product_type;strain_minNm,1.0
+44,Class-reduct rulebook (true concepts),OSF,strain_minNm,12000.0,11975.650000464359,24.349999535641473,0.0017643392991653969,product_type;strain_minNm,1.0
+44,Class-reduct rulebook (true concepts),OSF,strain_minNm,13000.0,11975.650000464359,1024.3499995356415,0.07422180676576251,product_type;strain_minNm,1.0
+44,Class-reduct rulebook (true concepts),TWF,tool_wear_min,200.0,199.0000000103,0.9999999897000009,0.003984063703984068,,0.0
+44,Class-reduct rulebook (true concepts),TWF,tool_wear_min,240.0,225.4999999995,14.500000000499995,0.05776892430478085,,0.0
+44,MAKE rulebook (predicted concepts),HDF,delta_t_K,8.6,8.69061854739998,0.09061854739998054,0.0201374549777732,delta_t_K;speed_rpm,1.0
+44,MAKE rulebook (predicted concepts),HDF,speed_rpm,1380.0,1381.226256593,1.2262565930000164,0.0007192120780058748,delta_t_K;speed_rpm,1.0
+44,MAKE rulebook (predicted concepts),PWF,power_W,3500.0,7624.599084423769,4124.599084423769,0.46014808979701166,power_W,1.0
+44,MAKE rulebook (predicted concepts),PWF,power_W,9000.0,9171.266102460806,171.266102460806,0.019106770932459986,power_W,1.0
+44,MAKE rulebook (predicted concepts),OSF,strain_minNm,11000.0,11172.846030993358,172.846030993358,0.012523985667431674,strain_minNm,0.5
+44,MAKE rulebook (predicted concepts),OSF,strain_minNm,12000.0,11410.555606033919,589.4443939660814,0.04270964799916539,strain_minNm,0.5
+44,MAKE rulebook (predicted concepts),OSF,strain_minNm,13000.0,11410.555606033919,1589.4443939660814,0.11516711546576251,strain_minNm,0.5
+44,MAKE rulebook (predicted concepts),TWF,tool_wear_min,200.0,199.3391728967,0.6608271032999937,0.0026327773039840387,delta_t_K;power_W;tool_wear_min;torque_Nm,0.25
+44,MAKE rulebook (predicted concepts),TWF,tool_wear_min,240.0,220.3691349561,19.630865043900002,0.07821061770478088,delta_t_K;power_W;tool_wear_min;torque_Nm,0.25
+44,MAKE rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+44,MAKE rulebook (true concepts),HDF,speed_rpm,1380.0,1379.9999999625,3.7500058169825934e-08,2.1994169014560666e-11,delta_t_K;speed_rpm,1.0
+44,MAKE rulebook (true concepts),PWF,power_W,3500.0,3797.071928634136,297.07192863413593,0.03314190729701168,power_W,1.0
+44,MAKE rulebook (true concepts),PWF,power_W,9000.0,9003.977332337625,3.97733233762483,0.00044371873245994107,power_W,1.0
+44,MAKE rulebook (true concepts),OSF,strain_minNm,11000.0,11082.583999643519,82.58399964351884,0.005983827467431734,delta_t_K;power_W;strain_minNm,0.25
+44,MAKE rulebook (true concepts),OSF,strain_minNm,12000.0,11975.650000464359,24.349999535641473,0.0017643392991653969,delta_t_K;power_W;strain_minNm,0.25
+44,MAKE rulebook (true concepts),OSF,strain_minNm,13000.0,11975.650000464359,1024.3499995356415,0.07422180676576251,delta_t_K;power_W;strain_minNm,0.25
+44,MAKE rulebook (true concepts),TWF,tool_wear_min,200.0,199.0000000103,0.9999999897000009,0.003984063703984068,power_W;speed_rpm;tool_wear_min;torque_Nm,0.25
+44,MAKE rulebook (true concepts),TWF,tool_wear_min,240.0,225.4999999995,14.500000000499995,0.05776892430478085,power_W;speed_rpm;tool_wear_min;torque_Nm,0.25
+44,CART,HDF,delta_t_K,8.6,8.535335,0.06466499999999975,0.014369999999999763,delta_t_K;power_W;speed_rpm;strain_minNm,0.5
+44,CART,HDF,speed_rpm,1380.0,1369.007646,10.992353999999978,0.0064471284457477875,delta_t_K;power_W;speed_rpm;strain_minNm,0.5
+44,CART,PWF,power_W,3500.0,9015.497117,5515.497117000001,0.6153193100034451,power_W;speed_rpm;strain_minNm,0.3333333333333333
+44,CART,PWF,power_W,9000.0,9015.497117,15.497117000000799,0.0017288877388933915,power_W;speed_rpm;strain_minNm,0.3333333333333333
+44,CART,OSF,strain_minNm,11000.0,11185.912441,185.9124410000004,0.013470744645393185,product_type;strain_minNm;torque_Nm,0.6666666666666666
+44,CART,OSF,strain_minNm,12000.0,11185.912441,814.0875589999996,0.05898672282120393,product_type;strain_minNm;torque_Nm,0.6666666666666666
+44,CART,OSF,strain_minNm,13000.0,11185.912441,1814.0875589999996,0.13144419028780105,product_type;strain_minNm;torque_Nm,0.6666666666666666
+44,CART,TWF,tool_wear_min,200.0,220.885407,20.885406999999987,0.08320879282868521,,0.0
+44,CART,TWF,tool_wear_min,240.0,220.885407,19.114593000000013,0.0761537569721116,,0.0
+45,Class-reduct rulebook (predicted concepts),HDF,delta_t_K,8.6,8.61818877264998,0.018188772649979867,0.004041949477773253,,0.0
+45,Class-reduct rulebook (predicted concepts),HDF,speed_rpm,1380.0,1382.316665132,2.3166651320000256,0.00135874787800588,,0.0
+45,Class-reduct rulebook (predicted concepts),PWF,power_W,3500.0,3841.354518149989,341.35451814998896,0.03808215689701169,torque_Nm,0.0
+45,Class-reduct rulebook (predicted concepts),PWF,power_W,9000.0,8986.44034893706,13.559651062940247,0.0015127403675399061,torque_Nm,0.0
+45,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,11000.0,11454.241194396,454.2411943959996,0.0323533614242165,strain_minNm,0.5
+45,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,12000.0,11454.241194396,545.7588056040004,0.03887170980085473,strain_minNm,0.5
+45,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,13000.0,11454.241194396,1545.7588056040004,0.11009678102592595,strain_minNm,0.5
+45,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,200.0,203.1997123614,3.199712361400003,0.0130069608186992,,0.0
+45,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,240.0,223.048057443,16.951942556999995,0.06891033559756096,,0.0
+45,Class-reduct rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+45,Class-reduct rulebook (true concepts),HDF,speed_rpm,1380.0,1379.9999999625,3.7500058169825934e-08,2.1994169014560666e-11,delta_t_K;speed_rpm,1.0
+45,Class-reduct rulebook (true concepts),PWF,power_W,3500.0,3830.988562996182,330.9885629961818,0.03692571129701171,power_W,1.0
+45,Class-reduct rulebook (true concepts),PWF,power_W,9000.0,9007.904016266471,7.904016266471444,0.0008817870324600179,power_W,1.0
+45,Class-reduct rulebook (true concepts),OSF,strain_minNm,11000.0,11011.240000332,11.240000331999909,0.0008005698242165177,product_type;strain_minNm,1.0
+45,Class-reduct rulebook (true concepts),OSF,strain_minNm,12000.0,11888.25000012,111.74999987999945,0.007959401700854662,product_type;strain_minNm,1.0
+45,Class-reduct rulebook (true concepts),OSF,strain_minNm,13000.0,11888.25000012,1111.7499998799995,0.07918447292592588,product_type;strain_minNm,1.0
+45,Class-reduct rulebook (true concepts),TWF,tool_wear_min,200.0,196.9999999926,3.00000000739999,0.012195121981300773,,0.0
+45,Class-reduct rulebook (true concepts),TWF,tool_wear_min,240.0,224.499999996,15.500000003999986,0.06300813009756091,,0.0
+45,MAKE rulebook (predicted concepts),HDF,delta_t_K,8.6,8.61818877264998,0.018188772649979867,0.004041949477773253,delta_t_K;speed_rpm,1.0
+45,MAKE rulebook (predicted concepts),HDF,speed_rpm,1380.0,1382.316665132,2.3166651320000256,0.00135874787800588,delta_t_K;speed_rpm,1.0
+45,MAKE rulebook (predicted concepts),PWF,power_W,3500.0,3841.354518149989,341.35451814998896,0.03808215689701169,power_W,1.0
+45,MAKE rulebook (predicted concepts),PWF,power_W,9000.0,8986.44034893706,13.559651062940247,0.0015127403675399061,power_W,1.0
+45,MAKE rulebook (predicted concepts),OSF,strain_minNm,11000.0,11454.241194396,454.2411943959996,0.0323533614242165,strain_minNm,0.5
+45,MAKE rulebook (predicted concepts),OSF,strain_minNm,12000.0,11454.241194396,545.7588056040004,0.03887170980085473,strain_minNm,0.5
+45,MAKE rulebook (predicted concepts),OSF,strain_minNm,13000.0,11454.241194396,1545.7588056040004,0.11009678102592595,strain_minNm,0.5
+45,MAKE rulebook (predicted concepts),TWF,tool_wear_min,200.0,203.1997123614,3.199712361400003,0.0130069608186992,delta_t_K;power_W;speed_rpm;torque_Nm,0.0
+45,MAKE rulebook (predicted concepts),TWF,tool_wear_min,240.0,223.048057443,16.951942556999995,0.06891033559756096,delta_t_K;power_W;speed_rpm;torque_Nm,0.0
+45,MAKE rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+45,MAKE rulebook (true concepts),HDF,speed_rpm,1380.0,1379.9999999625,3.7500058169825934e-08,2.1994169014560666e-11,delta_t_K;speed_rpm,1.0
+45,MAKE rulebook (true concepts),PWF,power_W,3500.0,3830.988562996182,330.9885629961818,0.03692571129701171,power_W,1.0
+45,MAKE rulebook (true concepts),PWF,power_W,9000.0,9007.904016266471,7.904016266471444,0.0008817870324600179,power_W,1.0
+45,MAKE rulebook (true concepts),OSF,strain_minNm,11000.0,11011.240000332,11.240000331999909,0.0008005698242165177,strain_minNm,0.5
+45,MAKE rulebook (true concepts),OSF,strain_minNm,12000.0,11888.25000012,111.74999987999945,0.007959401700854662,strain_minNm,0.5
+45,MAKE rulebook (true concepts),OSF,strain_minNm,13000.0,11888.25000012,1111.7499998799995,0.07918447292592588,strain_minNm,0.5
+45,MAKE rulebook (true concepts),TWF,tool_wear_min,200.0,196.9999999926,3.00000000739999,0.012195121981300773,delta_t_K;power_W;speed_rpm;torque_Nm,0.0
+45,MAKE rulebook (true concepts),TWF,tool_wear_min,240.0,224.499999996,15.500000003999986,0.06300813009756091,delta_t_K;power_W;speed_rpm;torque_Nm,0.0
+45,CART,HDF,delta_t_K,8.6,8.617945,0.017945000000000988,0.003987777777777947,delta_t_K;power_W;speed_rpm;strain_minNm,0.5
+45,CART,HDF,speed_rpm,1380.0,1368.148672,11.851327999999967,0.006950925513196461,delta_t_K;power_W;speed_rpm;strain_minNm,0.5
+45,CART,PWF,power_W,3500.0,8978.425431,5478.425431,0.611183522464027,power_W;process_temp_K;speed_rpm;strain_minNm,0.25
+45,CART,PWF,power_W,9000.0,8978.425431,21.574569000000338,0.0024068998005247117,power_W;process_temp_K;speed_rpm;strain_minNm,0.25
+45,CART,OSF,strain_minNm,11000.0,10756.428802,243.57119799999964,0.0173483759259259,noise_sensor;product_type;strain_minNm,0.6666666666666666
+45,CART,OSF,strain_minNm,12000.0,11457.910123,542.0898770000003,0.038610390099715126,noise_sensor;product_type;strain_minNm,0.6666666666666666
+45,CART,OSF,strain_minNm,13000.0,11457.910123,1542.0898770000003,0.10983546132478635,noise_sensor;product_type;strain_minNm,0.6666666666666666
+45,CART,TWF,tool_wear_min,200.0,226.188142,26.188142,0.10645586178861788,,0.0
+45,CART,TWF,tool_wear_min,240.0,226.188142,13.811858,0.05614576422764228,,0.0
+46,Class-reduct rulebook (predicted concepts),HDF,delta_t_K,8.6,8.583124162449979,0.01687583755002109,0.0037501861222268614,,0.0
+46,Class-reduct rulebook (predicted concepts),HDF,speed_rpm,1380.0,1378.803959301,1.1960406989999228,0.0006961820133876152,,0.0
+46,Class-reduct rulebook (predicted concepts),PWF,power_W,3500.0,3866.5254076070323,366.5254076070323,0.040974519240905664,power_W,1.0
+46,Class-reduct rulebook (predicted concepts),PWF,power_W,9000.0,8763.417317177586,236.58268282241443,0.02644799374935914,power_W,1.0
+46,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,11000.0,10880.292181824001,119.70781817599891,0.008526197875783398,noise_sensor;strain_minNm,0.3333333333333333
+46,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,12000.0,10880.292181824001,1119.707818175999,0.07975126910085463,noise_sensor;strain_minNm,0.3333333333333333
+46,Class-reduct rulebook (predicted concepts),OSF,strain_minNm,13000.0,10880.292181824001,2119.707818175999,0.15097634032592586,noise_sensor;strain_minNm,0.3333333333333333
+46,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,200.0,204.10110169959998,4.10110169959998,0.016339050596015856,,0.0
+46,Class-reduct rulebook (predicted concepts),TWF,tool_wear_min,240.0,204.10110169959998,35.89889830040002,0.14302349920478097,,0.0
+46,Class-reduct rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+46,Class-reduct rulebook (true concepts),HDF,speed_rpm,1380.0,1378.9999999374,1.0000000626000656,0.0005820722133876982,delta_t_K;speed_rpm,1.0
+46,Class-reduct rulebook (true concepts),PWF,power_W,3500.0,3809.1678977014735,309.1678977014735,0.03456242244090564,power_W,1.0
+46,Class-reduct rulebook (true concepts),PWF,power_W,9000.0,9003.977333063105,3.9773330631051067,0.0004446330506408355,power_W,1.0
+46,Class-reduct rulebook (true concepts),OSF,strain_minNm,11000.0,11082.206000268001,82.20600026800093,0.005855128224216591,product_type;strain_minNm,1.0
+46,Class-reduct rulebook (true concepts),OSF,strain_minNm,12000.0,11958.55000002,41.44999997999912,0.002952279200854638,product_type;strain_minNm,1.0
+46,Class-reduct rulebook (true concepts),OSF,strain_minNm,13000.0,11958.55000002,1041.4499999799991,0.07417735042592587,product_type;strain_minNm,1.0
+46,Class-reduct rulebook (true concepts),TWF,tool_wear_min,200.0,202.00000000149998,2.000000001499984,0.007968127496015873,,0.0
+46,Class-reduct rulebook (true concepts),TWF,tool_wear_min,240.0,225.4999999995,14.500000000499995,0.05776892430478085,,0.0
+46,MAKE rulebook (predicted concepts),HDF,delta_t_K,8.6,8.583124162449979,0.01687583755002109,0.0037501861222268614,delta_t_K;speed_rpm,1.0
+46,MAKE rulebook (predicted concepts),HDF,speed_rpm,1380.0,1378.803959301,1.1960406989999228,0.0006961820133876152,delta_t_K;speed_rpm,1.0
+46,MAKE rulebook (predicted concepts),PWF,power_W,3500.0,3866.5254076070323,366.5254076070323,0.040974519240905664,power_W;speed_rpm;tool_wear_min;torque_Nm,0.25
+46,MAKE rulebook (predicted concepts),PWF,power_W,9000.0,8763.417317177586,236.58268282241443,0.02644799374935914,power_W;speed_rpm;tool_wear_min;torque_Nm,0.25
+46,MAKE rulebook (predicted concepts),OSF,strain_minNm,11000.0,10880.292181824001,119.70781817599891,0.008526197875783398,delta_t_K;strain_minNm,0.3333333333333333
+46,MAKE rulebook (predicted concepts),OSF,strain_minNm,12000.0,10880.292181824001,1119.707818175999,0.07975126910085463,delta_t_K;strain_minNm,0.3333333333333333
+46,MAKE rulebook (predicted concepts),OSF,strain_minNm,13000.0,10880.292181824001,2119.707818175999,0.15097634032592586,delta_t_K;strain_minNm,0.3333333333333333
+46,MAKE rulebook (predicted concepts),TWF,tool_wear_min,200.0,204.10110169959998,4.10110169959998,0.016339050596015856,power_W;speed_rpm;tool_wear_min;torque_Nm,0.25
+46,MAKE rulebook (predicted concepts),TWF,tool_wear_min,240.0,204.10110169959998,35.89889830040002,0.14302349920478097,power_W;speed_rpm;tool_wear_min;torque_Nm,0.25
+46,MAKE rulebook (true concepts),HDF,delta_t_K,8.6,8.599999999899978,1.000213245561099e-10,2.2226961012468585e-11,delta_t_K;speed_rpm,1.0
+46,MAKE rulebook (true concepts),HDF,speed_rpm,1380.0,1378.9999999374,1.0000000626000656,0.0005820722133876982,delta_t_K;speed_rpm,1.0
+46,MAKE rulebook (true concepts),PWF,power_W,3500.0,3809.1678977014735,309.1678977014735,0.03456242244090564,power_W,1.0
+46,MAKE rulebook (true concepts),PWF,power_W,9000.0,9003.977333063105,3.9773330631051067,0.0004446330506408355,power_W,1.0
+46,MAKE rulebook (true concepts),OSF,strain_minNm,11000.0,11082.206000268001,82.20600026800093,0.005855128224216591,product_type;strain_minNm,1.0
+46,MAKE rulebook (true concepts),OSF,strain_minNm,12000.0,11958.55000002,41.44999997999912,0.002952279200854638,product_type;strain_minNm,1.0
+46,MAKE rulebook (true concepts),OSF,strain_minNm,13000.0,11958.55000002,1041.4499999799991,0.07417735042592587,product_type;strain_minNm,1.0
+46,MAKE rulebook (true concepts),TWF,tool_wear_min,200.0,202.00000000149998,2.000000001499984,0.007968127496015873,power_W;speed_rpm;tool_wear_min;torque_Nm,0.25
+46,MAKE rulebook (true concepts),TWF,tool_wear_min,240.0,225.4999999995,14.500000000499995,0.05776892430478085,power_W;speed_rpm;tool_wear_min;torque_Nm,0.25
+46,CART,HDF,delta_t_K,8.6,8.601552,0.0015520000000002199,0.0003448888888889334,delta_t_K;power_W;speed_rpm;strain_minNm,0.5
+46,CART,HDF,speed_rpm,1380.0,1377.042097,2.9579029999999875,0.0017217130384167565,delta_t_K;power_W;speed_rpm;strain_minNm,0.5
+46,CART,PWF,power_W,3500.0,8997.290047,5497.290047,0.6145517121834557,power_W;speed_rpm;strain_minNm,0.3333333333333333
+46,CART,PWF,power_W,9000.0,8997.290047,2.7099529999995866,0.00030295040680913127,power_W;speed_rpm;strain_minNm,0.3333333333333333
+46,CART,OSF,strain_minNm,11000.0,10999.49333,0.5066700000006676,3.608760683765439e-05,noise_sensor;product_type;strain_minNm,0.6666666666666666
+46,CART,OSF,strain_minNm,12000.0,10999.49333,1000.5066700000007,0.07126115883190888,noise_sensor;product_type;strain_minNm,0.6666666666666666
+46,CART,OSF,strain_minNm,13000.0,10999.49333,2000.5066700000007,0.1424862300569801,noise_sensor;product_type;strain_minNm,0.6666666666666666
+46,CART,TWF,tool_wear_min,200.0,204.847631,4.847631000000007,0.01931327091633469,,0.0
+46,CART,TWF,tool_wear_min,240.0,204.847631,35.15236899999999,0.14004927888446211,,0.0

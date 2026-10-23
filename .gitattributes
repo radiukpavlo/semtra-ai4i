@@ -1,0 +1,2 @@
+# Store every file byte for byte so the checksums in outputs/protocol_freeze.sha256 hold on any checkout.
+* -text

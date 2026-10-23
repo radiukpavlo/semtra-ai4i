@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+# The dataset is downloaded from UCI (see README); its SHA-256 is recorded in PROTOCOL.md.
+data/raw/
+# Exploratory one-seed runs
+outputs/smoke/
