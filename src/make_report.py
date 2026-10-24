@@ -4,7 +4,9 @@
     python -I src/make_report.py --csv data/raw/ai4i2020.csv --run outputs/test --out outputs --figures-only
 
 Reads only the frozen run directory (and the raw CSV for the scatter plots); it never trains or re-runs a stage.
-The figures use the paper style of figure_style.py (15.8 cm wide, Libertinus Sans 7.5 pt, PDF + SVG + PNG).
+The figures use the paper style of figure_style.py (15.8 cm wide, Libertinus Sans 7.5 pt, PDF + SVG + PNG). F2 and F3
+are also written panel by panel without letters (F2a-F2c and the legend strip F2_legend, F3a-F3b), at the scale and
+font size of the combined figures, for the paper's sub-figure tables.
 """
 from __future__ import annotations
 
@@ -24,8 +26,9 @@ import pipeline as P  # noqa: E402
 from ai4i_data import CLASS_NAMES, load_ai4i  # noqa: E402
 from matplotlib.ticker import MultipleLocator  # noqa: E402
 
-from figure_style import (PALETTE, add_panel_label, apply_paper_style, paper_figure, save_figure,  # noqa: E402
-                          style_axis, thousands_formatter)
+from figure_style import (PALETTE, TEXT_W_CM, add_panel_label, apply_paper_style, axes_size_cm,  # noqa: E402
+                          fit_panel_row, legend_strip, panel_figure, paper_figure, save_figure, style_axis,
+                          thousands_formatter)
 
 CR_PRED, CR_TRUE = "Class-reduct rulebook (predicted concepts)", "Class-reduct rulebook (true concepts)"
 MAKE_PRED, MAKE_TRUE = "MAKE rulebook (predicted concepts)", "MAKE rulebook (true concepts)"
@@ -50,6 +53,18 @@ SHORT = {"delta_t_K": "ΔT", "speed_rpm": "Speed", "torque_Nm": "Torque", "power
 FIG_LABEL = {**SHORT, "air_temp_K": "Air temperature", "process_temp_K": "Process temperature"}
 # Figure heights in inches at the full text width (15.8 cm).
 H_THRESHOLDS, H_TRIAGE, H_FIDELITY = 2.45, 2.45, 2.15
+# Widths (cm) of the separate panel files: one column of a 3-column (F2) or 2-column (F3) table 15.8 cm wide.
+PANEL_W_THRESHOLDS, PANEL_W_TRIAGE = 5.2, 7.8
+# (method, color, legend label, line width) of the WEDD cuts in F2. True-concept cuts are drawn wider, so they stay
+# visible where a predicted-concept cut lies on top of them.
+CUT_LINES = [(CR_TRUE, PALETTE["blue"], "WEDD cut, true concepts", 1.0),
+             (CR_PRED, PALETTE["orange"], "WEDD cut, predicted concepts", 0.6)]
+# F3 colours (PI decision PI-11b). The class-reduct rulebook runs on predicted concepts, so its flags are orange like
+# every predicted-concept mark in the paper (blue stays for true concepts). Max-probability has one gray in both
+# panels (dark gray, which stays apart from orange in grayscale); black marks only "All MLP errors". Hybrid (bluish
+# green, dashed) and "Either" (yellow, white hatching) have hues of their own; the as-published flags stay reddish purple.
+TRIAGE_COLOR = {"max_prob": PALETTE["dark"], "hybrid": PALETTE["teal"], "class_reduct": PALETTE["orange"],
+                "as_published": PALETTE["purple"], "either": PALETTE["yellow"], "all_errors": PALETTE["black"]}
 
 
 def pm(mean: float, sd: float, digits: int = 3) -> str:
@@ -152,46 +167,47 @@ def nearest_cuts(cuts: pd.DataFrame, method: str, concept: str, theta: float) ->
     return vals
 
 
-def figure_thresholds(data, run: Path, out: Path) -> None:
-    cuts = pd.read_csv(run / "cuts_per_seed.csv")
-    B = pd.DataFrame(data.B, columns=data.concept_names)
+def panel_hdf(ax, data, B: pd.DataFrame, cuts: pd.DataFrame) -> None:
+    """F2 (a): ΔT against rotational speed, HDF rows, the documented HDF box and the nearest WEDD cuts."""
     y = data.y
-    fig, axes = paper_figure(H_THRESHOLDS, 3)
-    # (method, color, legend label, line width). True-concept cuts are drawn wider, so they stay visible where a
-    # predicted-concept cut lies on top of them.
-    lines = [(CR_TRUE, PALETTE["blue"], "WEDD cut, true concepts", 1.0),
-             (CR_PRED, PALETTE["orange"], "WEDD cut, predicted concepts", 0.6)]
-
-    ax = axes[0]
     none = y == 0
     ax.scatter(B.loc[none, "speed_rpm"], B.loc[none, "delta_t_K"], s=1.2, c=PALETTE["light"], lw=0, rasterized=True, label="other rows")
     hdf = y == CLASS_NAMES.index("HDF")
     ax.scatter(B.loc[hdf, "speed_rpm"], B.loc[hdf, "delta_t_K"], s=4, c=PALETTE["vermillion"], lw=0, rasterized=True, label="HDF")
     ax.add_patch(plt.Rectangle((1150, 7.5), 1380 - 1150, 8.6 - 7.5, fc=PALETTE["pale_orange"], ls="--", lw=0.8,
                                ec=PALETTE["black"], zorder=0))
-    for method, color, _, lw in lines:
+    for method, color, _, lw in CUT_LINES:
         for v in nearest_cuts(cuts, method, "speed_rpm", 1380):
             ax.axvline(v, color=color, lw=lw, alpha=0.75)
         for v in nearest_cuts(cuts, method, "delta_t_K", 8.6):
             ax.axhline(v, color=color, lw=lw, alpha=0.75)
     ax.set(xlim=(1150, 1700), ylim=(7.5, 10.5), xlabel="Rotational speed (rpm)", ylabel="ΔT (K)")
     ax.xaxis.set_major_locator(MultipleLocator(100))
+    style_axis(ax)
 
-    ax = axes[1]
+
+def panel_pwf(ax, data, B: pd.DataFrame, cuts: pd.DataFrame) -> None:
+    """F2 (b): histogram of power, PWF rows, the documented PWF limits and the nearest WEDD cuts."""
+    y = data.y
+    none = y == 0
     bins = np.linspace(1000, 10600, 97)
     ax.hist(B.loc[none, "power_W"], bins=bins, color=PALETTE["light"], label="other rows")
     ax.hist(B.loc[y == CLASS_NAMES.index("PWF"), "power_W"], bins=bins, color=PALETTE["vermillion"], label="PWF")
     for theta in (3500, 9000):
         ax.axvline(theta, color=PALETTE["black"], ls="--", lw=0.8)
-        for method, color, _, lw in lines:
+        for method, color, _, lw in CUT_LINES:
             for v in nearest_cuts(cuts, method, "power_W", theta):
                 ax.axvline(v, color=color, lw=lw, alpha=0.75)
     ax.set(yscale="log", xlabel="Power (W)", ylabel="Rows")
     ax.xaxis.set_major_locator(MultipleLocator(3000))
     ax.xaxis.set_major_formatter(thousands_formatter())
     ax.yaxis.set_major_formatter(thousands_formatter())
+    style_axis(ax)
 
-    ax = axes[2]
+
+def panel_osf(ax, data, B: pd.DataFrame, cuts: pd.DataFrame) -> None:
+    """F2 (c): strain against product type (jittered), OSF rows, the documented OSF limits and the nearest WEDD cuts."""
+    y = data.y
     rng = np.random.default_rng(0)
     jitter = data.B[:, data.concept_names.index("product_type")] + rng.uniform(-0.25, 0.25, len(y))
     osf = y == CLASS_NAMES.index("OSF")
@@ -199,36 +215,58 @@ def figure_thresholds(data, run: Path, out: Path) -> None:
     ax.scatter(B.loc[osf, "strain_minNm"], jitter[osf], s=4, c=PALETTE["vermillion"], lw=0, rasterized=True, label="OSF")
     for k, theta in enumerate((11000, 12000, 13000)):
         ax.plot([theta, theta], [k - 0.4, k + 0.4], color=PALETTE["black"], ls="--", lw=0.8)
-    for method, color, _, lw in lines:
+    for method, color, _, lw in CUT_LINES:
         for v in nearest_cuts(cuts, method, "strain_minNm", 11000):
             ax.axvline(v, color=color, lw=lw, alpha=0.75)
     ax.set(xlim=(6000, 16500), yticks=[0, 1, 2], yticklabels=["L", "M", "H"],
            xlabel="Strain = tool wear × torque (min·Nm)", ylabel="Product type")
     ax.xaxis.set_major_locator(MultipleLocator(3000))
     ax.xaxis.set_major_formatter(thousands_formatter())
-    for a, lab in zip(axes, "abc"):
-        style_axis(a)
-        add_panel_label(a, lab)
+    style_axis(ax)
+
+
+def threshold_legend_handles() -> list:
     handles = [plt.Line2D([], [], color=PALETTE["black"], ls="--", lw=0.8, label="Documented rule")]
-    handles += [plt.Line2D([], [], color=c, lw=1.0, label=l) for _, c, l, _ in lines]
+    handles += [plt.Line2D([], [], color=c, lw=1.0, label=l) for _, c, l, _ in CUT_LINES]
     handles += [plt.Line2D([], [], ls="", marker="o", ms=3, mew=0, color=PALETTE["vermillion"], label="HDF, PWF, OSF rows"),
                 plt.Line2D([], [], ls="", marker="o", ms=3, mew=0, color=PALETTE["light"], label="Other rows")]
-    fig.legend(handles=handles, loc="outside upper center", ncol=5)
+    return handles
+
+
+def figure_thresholds(data, run: Path, out: Path) -> None:
+    cuts = pd.read_csv(run / "cuts_per_seed.csv")
+    B = pd.DataFrame(data.B, columns=data.concept_names)
+    panels = [(panel_hdf, "F2a_hdf"), (panel_pwf, "F2b_pwf"), (panel_osf, "F2c_osf")]
+    fig, axes = paper_figure(H_THRESHOLDS, 3)
+    for ax, (draw, _), lab in zip(axes, panels, "abc"):
+        draw(ax, data, B, cuts)
+        add_panel_label(ax, lab)
+    fig.legend(handles=threshold_legend_handles(), loc="outside upper center", ncol=5)
     save_figure(fig, out / "F2_thresholds_vs_physics")
+    sizes = axes_size_cm(fig)   # measured after saving, so the saved files do not depend on it
+
+    # The same panels as files of their own, without letters, with the axes boxes of the combined figure (narrower
+    # only where a 5.2 cm canvas leaves no room), and the legend row as a strip of its own.
+    row = []
+    for draw, _ in panels:
+        pfig, ax = panel_figure()
+        draw(ax, data, B, cuts)
+        row.append((pfig, ax))
+    fit_panel_row(row, PANEL_W_THRESHOLDS, [w for w, _ in sizes], sizes[0][1])
+    for (pfig, _), (_, name) in zip(row, panels):
+        save_figure(pfig, out / name, layout=False)
+    save_figure(legend_strip(threshold_legend_handles(), TEXT_W_CM, ncol=5), out / "F2_legend", layout=False)
 
 
-def figure_triage(run: Path, out: Path) -> None:
-    curves = pd.read_csv(run / "risk_coverage_curves.csv")
-    trg = pd.read_csv(run / "triage_per_seed.csv")
-    fig, axes = paper_figure(H_TRIAGE, 2, gridspec_kw={"width_ratios": [1.1, 1]})
-    ax = axes[0]
+def panel_coverage(ax, curves: pd.DataFrame, trg: pd.DataFrame) -> None:
+    """F3 (a): risk-coverage curves of the continuous scores and the operating points of the two rule-flag sets."""
     # Continuous scores as curves; the near-binary rule flags as operating points (their curves only reflect tie order).
-    for score, color, ls, label in [("mlp_max_prob", PALETTE["black"], "-", "MLP max-probability"),
-                                    ("class_reduct_hybrid", PALETTE["teal"], "--", "Hybrid (MLP + class-reduct)")]:
+    for score, color, ls, label in [("mlp_max_prob", TRIAGE_COLOR["max_prob"], "-", "MLP max-probability"),
+                                    ("class_reduct_hybrid", TRIAGE_COLOR["hybrid"], "--", "Hybrid (MLP + class-reduct)")]:
         c = curves[curves["score"] == score].groupby("coverage")["risk"].mean()
         ax.plot(c.index, c.to_numpy() * 100, color=color, ls=ls, lw=1.0, label=label)
-    for score, color, marker, label in [("class_reduct_disagreement", PALETTE["blue"], "o", "Class-reduct rule flags"),
-                                        ("make_disagreement", PALETTE["purple"], "s", "As-published rule flags")]:
+    for score, color, marker, label in [("class_reduct_disagreement", TRIAGE_COLOR["class_reduct"], "o", "Class-reduct rule flags"),
+                                        ("make_disagreement", TRIAGE_COLOR["as_published"], "s", "As-published rule flags")]:
         s = trg[trg["score"] == score]
         cov = 1 - s["bm_flagged_rows"] / s["n"]
         risk = 100 * (s["mlp_errors"] - s["bm_caught_by_rule_flags"]) / (s["n"] - s["bm_flagged_rows"])
@@ -238,22 +276,44 @@ def figure_triage(run: Path, out: Path) -> None:
     ax.yaxis.set_major_locator(MultipleLocator(0.5))
     ax.legend(loc="upper left")
     style_axis(ax, "y")
-    add_panel_label(ax, "a")
 
-    ax = axes[1]
+
+def panel_catches(ax, curves: pd.DataFrame, trg: pd.DataFrame) -> None:
+    """F3 (b): MLP errors caught per seed by the class-reduct flags, by max-probability at the same budget, by either."""
     s = trg[trg["score"] == "class_reduct_disagreement"].sort_values("seed")
     x = np.arange(len(s))
     w = 0.26
-    ax.bar(x - w, s["bm_caught_by_rule_flags"], w, color=PALETTE["blue"], label="Class-reduct rule flags")
-    ax.bar(x, s["bm_caught_by_mlp_same_budget"], w, color=PALETTE["mid"], label="Max-probability, same budget")
-    # White hatching keeps "either" apart from the blue bars in greyscale print.
-    ax.bar(x + w, s["bm_caught_by_either"], w, color=PALETTE["teal"], label="Either", hatch="////", edgecolor="white", lw=0)
-    ax.scatter(x, s["mlp_errors"], marker="_", s=120, color=PALETTE["black"], label="All MLP errors", zorder=3)
+    ax.bar(x - w, s["bm_caught_by_rule_flags"], w, color=TRIAGE_COLOR["class_reduct"], label="Class-reduct rule flags")
+    ax.bar(x, s["bm_caught_by_mlp_same_budget"], w, color=TRIAGE_COLOR["max_prob"], label="Max-probability, same budget")
+    # White hatching keeps "either" apart from the solid bars in greyscale print.
+    ax.bar(x + w, s["bm_caught_by_either"], w, color=TRIAGE_COLOR["either"], label="Either", hatch="////",
+           edgecolor="white", lw=0)
+    ax.scatter(x, s["mlp_errors"], marker="_", s=120, color=TRIAGE_COLOR["all_errors"], label="All MLP errors", zorder=3)
     ax.set(xticks=x, xticklabels=[str(v) for v in s["seed"]], ylim=(0, 72), xlabel="Seed", ylabel="MLP errors caught")
     ax.legend(loc="upper center", ncol=2, handlelength=1.1, columnspacing=0.8, markerscale=0.75)
     style_axis(ax, "y")
-    add_panel_label(ax, "b")
+
+
+def figure_triage(run: Path, out: Path) -> None:
+    curves = pd.read_csv(run / "risk_coverage_curves.csv")
+    trg = pd.read_csv(run / "triage_per_seed.csv")
+    panels = [(panel_coverage, "F3a_coverage"), (panel_catches, "F3b_catches")]
+    fig, axes = paper_figure(H_TRIAGE, 2, gridspec_kw={"width_ratios": [1.1, 1]})
+    for ax, (draw, _), lab in zip(axes, panels, "ab"):
+        draw(ax, curves, trg)
+        add_panel_label(ax, lab)
     save_figure(fig, out / "F3_triage")
+    sizes = axes_size_cm(fig)
+
+    # The same panels as files of their own, without letters (legends stay inside), as for F2.
+    row = []
+    for draw, _ in panels:
+        pfig, ax = panel_figure()
+        draw(ax, curves, trg)
+        row.append((pfig, ax))
+    fit_panel_row(row, PANEL_W_TRIAGE, [w for w, _ in sizes], sizes[0][1])
+    for (pfig, _), (_, name) in zip(row, panels):
+        save_figure(pfig, out / name, layout=False)
 
 
 def figure_fidelity(run: Path, out: Path) -> None:
