@@ -1,6 +1,6 @@
 # Auditing a neural failure-mode classifier with semantic transition and rough-set rules (AI4I 2020)
 
-Code and results for a companion study to the SEMTRA method (global semantic transition matrix, WEDD discretisation,
+Code and results for a study that applies the SEMTRA method (global semantic transition matrix, WEDD discretisation,
 rough-set rules). A small MLP classifies failure modes on the UCI AI4I 2020 predictive-maintenance benchmark; its hidden
 layer is mapped to physical concepts, and the extracted rules are checked against the dataset's documented failure rules
 and used to flag the MLP's likely errors for human review.
