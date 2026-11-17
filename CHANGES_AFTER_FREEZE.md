@@ -43,9 +43,11 @@ call the frozen functions unchanged and write only to `outputs/revision/`.
 | Script | What it does | Outputs |
 |--------|--------------|---------|
 | `src/revision/rerun_time_sensitivity.py` | (1) re-runs the frozen test stage (`run_experiment.run_seed`) and compares it with `outputs/test`; it also saves the per-row predictions of the true-concept rulebooks, which the frozen run did not save; (2) times each stage with wrappers around the frozen functions; (3) refits the class-reduct rulebook on predicted concepts with the rule purity tau in {0.60, 0.70, 0.84} and the support s_min in {5, 8, 11}, with the WEDD cuts fixed at the frozen setting, on training and validation rows only | `reproduction_check.json`, `objects_full.csv`, `timing_calls.csv`, `timing_summary.csv`, `sensitivity_tau_smin.csv`, `run_info.json` |
-| `src/revision/bootstrap_ci.py` | 95% percentile bootstrap: 2,000 resamples of the test rows within each seed, stratified by class, each statistic averaged over the five seeds; paired for differences; scores fixed at their full-test values | `bootstrap_ci.csv`, `bootstrap_ci_per_seed.csv`, `bootstrap_info.json` |
+| `src/revision/bootstrap_ci.py` | 95% percentile bootstrap: 2,000 resamples of the test rows within each seed, stratified by class, each statistic averaged over the five seeds; paired for differences (macro-F1, per-mode recall of the MLP minus the true-concept rulebook, AUROC gains); scores fixed at their full-test values | `bootstrap_ci.csv`, `bootstrap_ci_per_seed.csv`, `bootstrap_info.json` |
+| `src/revision/reproduction_full.py` | re-runs the frozen test stage again and compares all eight per-seed outputs of `outputs/test` and `selection.json` (without seconds) with the frozen files; written after `rerun_time_sensitivity.py` compared only four of them | `reproduction_check_full.json` |
 
 ```
 .venv/Scripts/python.exe -I src/revision/rerun_time_sensitivity.py --csv data/raw/ai4i2020.csv --out outputs/revision
 .venv/Scripts/python.exe -I src/revision/bootstrap_ci.py --objects outputs/revision/objects_full.csv --out outputs/revision
+.venv/Scripts/python.exe -I src/revision/reproduction_full.py --csv data/raw/ai4i2020.csv --out outputs/revision
 ```

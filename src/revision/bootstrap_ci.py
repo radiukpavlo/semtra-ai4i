@@ -66,6 +66,9 @@ def stats(d: pd.DataFrame) -> dict:
     for name, col in SCORES.items():
         out[("AUROC", name)] = auroc(err, d[col].to_numpy(float))
     out[("macro-F1 difference", "class-reduct, true minus MLP")] = out[("macro-F1", "class-reduct, true")] - out[("macro-F1", "MLP")]
+    for k in range(1, len(CLASSES)):
+        out[("recall difference", f"{CLASSES[k]}: MLP minus class-reduct, true")] = (
+            out[(f"recall, {CLASSES[k]}", "MLP")] - out[(f"recall, {CLASSES[k]}", "class-reduct, true")])
     out[("AUROC gain", "hybrid, class-reduct minus max-probability")] = out[("AUROC", "hybrid, class-reduct")] - out[("AUROC", "max-probability")]
     out[("AUROC gain", "hybrid, as-published minus max-probability")] = out[("AUROC", "hybrid, as-published")] - out[("AUROC", "max-probability")]
     return out
@@ -102,7 +105,7 @@ def main() -> None:
     per_seed = []
     for s in seeds:
         for i, k in enumerate(keys):
-            if k[0] in ("AUROC gain", "macro-F1 difference"):
+            if k[0] in ("AUROC gain", "macro-F1 difference", "recall difference"):
                 per_seed.append({"seed": s, "statistic": k[0], "method": k[1], "point": point_seed[s][k],
                                  "ci95_low": float(np.nanpercentile(boot[s][:, i], 2.5)),
                                  "ci95_high": float(np.nanpercentile(boot[s][:, i], 97.5))})

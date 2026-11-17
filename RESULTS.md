@@ -183,7 +183,10 @@ Run after the AIT&AIS'2026 reviews with the frozen code unchanged; scripts in `s
 `outputs/revision/`, log in `CHANGES_AFTER_FREEZE.md`. Labelled post hoc in the paper.
 
 - **Reproduction** (`reproduction_check.json`): the re-run of the test stage reproduced `outputs/test` exactly (objects,
-  metrics, triage and cuts; largest absolute difference 0.0).
+  metrics, triage and cuts; largest absolute difference 0.0). The full check (`reproduction_check_full.json`, from
+  `reproduction_full.py`) compares all eight per-seed outputs (metrics, concepts, recovery, cuts, rules, triage,
+  risk-coverage curves, objects) and `selection.json` without its wall-clock seconds: identical, largest absolute
+  difference 0.0.
 - **Bootstrap** (`bootstrap_ci.csv`, `bootstrap_ci_per_seed.csv`; 2,000 class-stratified resamples of the test rows per
   seed, statistic averaged over seeds, 95% percentile interval):
   - macro-F1 difference, class-reduct on true concepts minus MLP: 0.0055 (-0.0304 to 0.0347);
@@ -192,10 +195,13 @@ Run after the AIT&AIS'2026 reviews with the frozen code unchanged; scripts in `s
     seeds 42, 44 and 46; as-published hybrid: -0.0071 (-0.0191 to 0.0034);
   - recall, MLP: HDF 0.88 (0.81-0.93), PWF 0.76 (0.66-0.85), OSF 0.88 (0.81-0.95);
     class-reduct, true concepts: HDF 0.85 (0.78-0.91), PWF 0.57 (0.46-0.68), OSF 0.85 (0.77-0.92);
-    class-reduct, predicted concepts: HDF 0.13 (0.09-0.17).
+    class-reduct, predicted concepts: HDF 0.13 (0.09-0.17);
+  - paired recall difference, MLP minus class-reduct on true concepts: HDF 0.029 (-0.048 to 0.114), PWF 0.188
+    (0.063-0.313), OSF 0.038 (-0.052 to 0.127), TWF 0.097 (0.025-0.192).
 - **Timing** (`timing_summary.csv`, `timing_calls.csv`, `run_info.json`; AMD Ryzen 7 2700, medians over 5 seeds):
   transition fit 0.09 s per seed; WEDD on ten concepts 0.14 s per call; class-reduct search 0.59 s per failure mode
-  (0.28-0.83 s); all rulebooks and CART 6.2 s per seed (5.4-6.4 s); grid of three MLPs 52.7 s (42.0-55.3 s); whole seed
+  (0.28-0.83 s); all stages except the MLP grid (transition, WEDD, the four rulebooks, CART) 6.2 s per seed
+  (5.4-6.4 s), of which the rulebooks and CART 5.6 s; grid of three MLPs 52.7 s (42.0-55.3 s); whole seed
   58.3 s (47.7-61.8 s).
 - **Threshold sensitivity** (`sensitivity_tau_smin.csv`; predicted concepts, WEDD cuts fixed, training rows for the concept
   sets, validation rows for the metrics). Frozen setting tau 0.84, s_min 11: exact HDF / PWF / OSF sets in 1 / 4 / 2

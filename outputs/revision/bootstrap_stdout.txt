@@ -41,21 +41,45 @@ mean failure-mode recall                            CART, predicted             
                    AUROC                    as-published rule doubt                 0.8076    0.7702     0.8403
                    AUROC                       hybrid, as-published                 0.9307    0.9116     0.9456
      macro-F1 difference               class-reduct, true minus MLP                 0.0055   -0.0304     0.0347
+       recall difference          HDF: MLP minus class-reduct, true                 0.0286   -0.0479     0.1143
+       recall difference          PWF: MLP minus class-reduct, true                 0.1875    0.0625     0.3125
+       recall difference          OSF: MLP minus class-reduct, true                 0.0375   -0.0517     0.1267
+       recall difference          TWF: MLP minus class-reduct, true                 0.0972    0.0250     0.1917
               AUROC gain hybrid, class-reduct minus max-probability                 0.0065    0.0031     0.0102
               AUROC gain hybrid, as-published minus max-probability                -0.0071   -0.0191     0.0034
  seed           statistic                                     method   point  ci95_low  ci95_high
    42 macro-F1 difference               class-reduct, true minus MLP  0.0417   -0.0338     0.1077
+   42   recall difference          HDF: MLP minus class-reduct, true  0.0000   -0.1905     0.2381
+   42   recall difference          PWF: MLP minus class-reduct, true  0.3125    0.0000     0.6250
+   42   recall difference          OSF: MLP minus class-reduct, true  0.0625    0.0000     0.1875
+   42   recall difference          TWF: MLP minus class-reduct, true  0.0000    0.0000     0.0000
    42          AUROC gain hybrid, class-reduct minus max-probability  0.0102    0.0030     0.0202
    42          AUROC gain hybrid, as-published minus max-probability -0.0076   -0.0209     0.0051
    43 macro-F1 difference               class-reduct, true minus MLP -0.0686   -0.1622     0.0187
+   43   recall difference          HDF: MLP minus class-reduct, true  0.0476   -0.0952     0.1905
+   43   recall difference          PWF: MLP minus class-reduct, true  0.2500   -0.0625     0.5625
+   43   recall difference          OSF: MLP minus class-reduct, true  0.0625   -0.2500     0.3750
+   43   recall difference          TWF: MLP minus class-reduct, true  0.2500    0.0000     0.6250
    43          AUROC gain hybrid, class-reduct minus max-probability  0.0023   -0.0034     0.0083
    43          AUROC gain hybrid, as-published minus max-probability  0.0002   -0.0161     0.0181
    44 macro-F1 difference               class-reduct, true minus MLP -0.0026   -0.0733     0.0620
+   44   recall difference          HDF: MLP minus class-reduct, true  0.0952   -0.0476     0.2857
+   44   recall difference          PWF: MLP minus class-reduct, true  0.1875   -0.0625     0.4375
+   44   recall difference          OSF: MLP minus class-reduct, true  0.0625    0.0000     0.1875
+   44   recall difference          TWF: MLP minus class-reduct, true  0.1250    0.0000     0.3750
    44          AUROC gain hybrid, class-reduct minus max-probability  0.0051    0.0008     0.0102
    44          AUROC gain hybrid, as-published minus max-probability -0.0044   -0.0117     0.0022
    45 macro-F1 difference               class-reduct, true minus MLP  0.0238   -0.0539     0.0882
+   45   recall difference          HDF: MLP minus class-reduct, true -0.0952   -0.2381     0.0000
+   45   recall difference          PWF: MLP minus class-reduct, true  0.1250   -0.1250     0.3750
+   45   recall difference          OSF: MLP minus class-reduct, true -0.0667   -0.2667     0.1333
+   45   recall difference          TWF: MLP minus class-reduct, true  0.1111    0.0000     0.3333
    45          AUROC gain hybrid, class-reduct minus max-probability  0.0065   -0.0033     0.0212
    45          AUROC gain hybrid, as-published minus max-probability -0.0520   -0.1039    -0.0124
    46 macro-F1 difference               class-reduct, true minus MLP  0.0331   -0.0361     0.0891
+   46   recall difference          HDF: MLP minus class-reduct, true  0.0952   -0.1429     0.3333
+   46   recall difference          PWF: MLP minus class-reduct, true  0.0625   -0.2500     0.3750
+   46   recall difference          OSF: MLP minus class-reduct, true  0.0667    0.0000     0.2000
+   46   recall difference          TWF: MLP minus class-reduct, true  0.0000    0.0000     0.0000
    46          AUROC gain hybrid, class-reduct minus max-probability  0.0084    0.0033     0.0139
    46          AUROC gain hybrid, as-published minus max-probability  0.0284    0.0083     0.0565

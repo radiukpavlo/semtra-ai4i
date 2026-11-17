@@ -1,16 +1,36 @@
 seed,statistic,method,point,ci95_low,ci95_high
 42,macro-F1 difference,"class-reduct, true minus MLP",0.041701936037727094,-0.03383335339836986,0.10771327027068842
+42,recall difference,"HDF: MLP minus class-reduct, true",0.0,-0.19047619047619047,0.23809523809523803
+42,recall difference,"PWF: MLP minus class-reduct, true",0.3125,0.0,0.625
+42,recall difference,"OSF: MLP minus class-reduct, true",0.0625,0.0,0.1875
+42,recall difference,"TWF: MLP minus class-reduct, true",0.0,0.0,0.0
 42,AUROC gain,"hybrid, class-reduct minus max-probability",0.010195674562306967,0.002993068099568355,0.02023797586385419
 42,AUROC gain,"hybrid, as-published minus max-probability",-0.007574665293511806,-0.020891245806266397,0.005088801857830071
 43,macro-F1 difference,"class-reduct, true minus MLP",-0.06863202988049621,-0.16224465474196378,0.018658296802187325
+43,recall difference,"HDF: MLP minus class-reduct, true",0.04761904761904767,-0.09523809523809523,0.19047619047619047
+43,recall difference,"PWF: MLP minus class-reduct, true",0.25,-0.0625,0.5625
+43,recall difference,"OSF: MLP minus class-reduct, true",0.0625,-0.25,0.375
+43,recall difference,"TWF: MLP minus class-reduct, true",0.25,0.0,0.625
 43,AUROC gain,"hybrid, class-reduct minus max-probability",0.002308474841536956,-0.003379504927226107,0.008284060721916666
 43,AUROC gain,"hybrid, as-published minus max-probability",0.00018585178808983027,-0.016096905598968515,0.018093888211104428
 44,macro-F1 difference,"class-reduct, true minus MLP",-0.0026355315241762822,-0.07333902145252438,0.06203173647679198
+44,recall difference,"HDF: MLP minus class-reduct, true",0.09523809523809523,-0.04761904761904767,0.2857142857142857
+44,recall difference,"PWF: MLP minus class-reduct, true",0.1875,-0.0625,0.4375
+44,recall difference,"OSF: MLP minus class-reduct, true",0.0625,0.0,0.1875
+44,recall difference,"TWF: MLP minus class-reduct, true",0.125,0.0,0.375
 44,AUROC gain,"hybrid, class-reduct minus max-probability",0.005107198655585732,0.0007509043489978661,0.01024965325936198
 44,AUROC gain,"hybrid, as-published minus max-probability",-0.004404794727375427,-0.01171709268910216,0.002236060195633212
 45,macro-F1 difference,"class-reduct, true minus MLP",0.023780680703213153,-0.05387467549828346,0.08815027485829825
+45,recall difference,"HDF: MLP minus class-reduct, true",-0.09523809523809523,-0.23809523809523814,0.0
+45,recall difference,"PWF: MLP minus class-reduct, true",0.125,-0.125,0.375
+45,recall difference,"OSF: MLP minus class-reduct, true",-0.06666666666666665,-0.2666666666666667,0.13333333333333341
+45,recall difference,"TWF: MLP minus class-reduct, true",0.1111111111111111,0.0,0.3333333333333333
 45,AUROC gain,"hybrid, class-reduct minus max-probability",0.006536989795918324,-0.003317989715564232,0.021209291099256466
 45,AUROC gain,"hybrid, as-published minus max-probability",-0.052016900510204134,-0.1038689447440958,-0.012391361227217621
 46,macro-F1 difference,"class-reduct, true minus MLP",0.03307012103309526,-0.03605741406920364,0.0891392925476362
+46,recall difference,"HDF: MLP minus class-reduct, true",0.09523809523809523,-0.1428571428571428,0.33333333333333326
+46,recall difference,"PWF: MLP minus class-reduct, true",0.0625,-0.25,0.375
+46,recall difference,"OSF: MLP minus class-reduct, true",0.06666666666666665,0.0,0.20000000000000007
+46,recall difference,"TWF: MLP minus class-reduct, true",0.0,0.0,0.0
 46,AUROC gain,"hybrid, class-reduct minus max-probability",0.008445003555215158,0.0033361592736421584,0.013936047325098075
 46,AUROC gain,"hybrid, as-published minus max-probability",0.028381556637313343,0.008271730777566447,0.0565207366193258
