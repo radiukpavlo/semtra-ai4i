@@ -1,14 +1,21 @@
 # Auditing a neural failure-mode classifier with semantic transition and rough-set rules (AI4I 2020)
 
-Code and results for a study that applies the SEMTRA method (global semantic transition matrix, WEDD discretisation,
+Code and results for a companion study to the SEMTRA method (global semantic transition matrix, WEDD discretisation,
 rough-set rules). A small MLP classifies failure modes on the UCI AI4I 2020 predictive-maintenance benchmark; its hidden
 layer is mapped to physical concepts, and the extracted rules are checked against the dataset's documented failure rules
 and used to flag the MLP's likely errors for human review.
 
 - `PROTOCOL.md`: the experimental protocol, frozen before any test evaluation, with file checksums.
-- `CHANGES_AFTER_FREEZE.md`: the one comment-only change made after the freeze, and how to verify it.
+- `CHANGES_AFTER_FREEZE.md`: the comment masked for the double-blind review and restored after it, the figure restyle, and the
+  post hoc analyses added after the reviews (`src/revision/`, `outputs/revision/`).
 - `RESULTS.md`: results memo with every number traced to `outputs/`.
 - `outputs/`: data audit, validation and test outputs, tables (`outputs/tables/`) and figures (`outputs/figures/`).
+
+## Paper
+
+P. Radiuk, O. Barmak, T. Skrypnyk, S. Petrovskyi, I. Krak, M. Kvassay, "Do extracted rules recover the physics? Auditing a
+neural predictive-maintenance classifier", AIT&AIS'2026: International Scientific Workshop on Applied Information Technologies and
+Artificial Intelligence Systems, Chernivtsi, Ukraine, 8-9 December 2026, CEUR Workshop Proceedings (to appear).
 
 ## Layout
 
@@ -22,6 +29,7 @@ and used to flag the MLP's likely errors for human review.
 | `src/check_data.py` | Audit of the CSV against the documented failure rules |
 | `src/explore_validation.py` | Validation-only comparison of rulebook settings (design history, see `PROTOCOL.md` §6) |
 | `src/figure_style.py` | Figure style |
+| `src/revision/` | Post hoc analyses after the reviews: reproduction re-run, timing, threshold sensitivity, bootstrap intervals |
 
 ## Data
 

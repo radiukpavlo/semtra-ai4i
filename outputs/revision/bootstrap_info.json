@@ -1,0 +1,7 @@
+{
+  "B": 2000,
+  "rng_seed": 20261117,
+  "resampling": "test rows within each seed, stratified by true class",
+  "aggregation": "statistic per seed, mean over seeds, percentile interval of the mean",
+  "scores": "fixed at their full-test-split values"
+}

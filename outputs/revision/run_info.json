@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-17 22:59",
+  "cpu": "AMD Ryzen 7 2700 Eight-Core Processor",
+  "logical_cpus": 16,
+  "python": "3.13.15",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "note": "Single process; wall-clock time from time.perf_counter around the frozen functions."
+}

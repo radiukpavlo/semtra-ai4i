@@ -1,4 +1,4 @@
-# Vendored unchanged from the SEMTRA reference implementation: scripts/core/paper1_core.py at commit [masked for double-blind review].
+# Vendored unchanged from the SEMTRA reference implementation: scripts/core/paper1_core.py at commit 263c3225d6b8e5e1ae962a51b2ab14d7a1d23a3d.
 # Do not edit; extensions live in pipeline.py.
 #!/usr/bin/env python3
 """Core algorithms for Paper 1 PoC XAI experiments.

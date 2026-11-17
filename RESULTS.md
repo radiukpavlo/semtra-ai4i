@@ -176,3 +176,30 @@ python -I src/run_experiment.py --csv data/raw/ai4i2020.csv --out outputs --stag
 python -I src/make_report.py --csv data/raw/ai4i2020.csv --run outputs/test --out outputs
 ```
 About 50 s per seed on a laptop CPU. The test stage needs `PROTOCOL.md` with "Status: FROZEN".
+
+## 12. Post hoc analyses after the reviews (2026-11-17)
+
+Run after the AIT&AIS'2026 reviews with the frozen code unchanged; scripts in `src/revision/`, outputs in
+`outputs/revision/`, log in `CHANGES_AFTER_FREEZE.md`. Labelled post hoc in the paper.
+
+- **Reproduction** (`reproduction_check.json`): the re-run of the test stage reproduced `outputs/test` exactly (objects,
+  metrics, triage and cuts; largest absolute difference 0.0).
+- **Bootstrap** (`bootstrap_ci.csv`, `bootstrap_ci_per_seed.csv`; 2,000 class-stratified resamples of the test rows per
+  seed, statistic averaged over seeds, 95% percentile interval):
+  - macro-F1 difference, class-reduct on true concepts minus MLP: 0.0055 (-0.0304 to 0.0347);
+  - AUROC: max-probability 0.938 (0.922-0.950); class-reduct rule doubt 0.782 (0.748-0.809); hybrid 0.944 (0.928-0.957);
+  - AUROC gain of the hybrid over max-probability: 0.0065 (0.0031-0.0102); per seed, the interval excludes zero in
+    seeds 42, 44 and 46; as-published hybrid: -0.0071 (-0.0191 to 0.0034);
+  - recall, MLP: HDF 0.88 (0.81-0.93), PWF 0.76 (0.66-0.85), OSF 0.88 (0.81-0.95);
+    class-reduct, true concepts: HDF 0.85 (0.78-0.91), PWF 0.57 (0.46-0.68), OSF 0.85 (0.77-0.92);
+    class-reduct, predicted concepts: HDF 0.13 (0.09-0.17).
+- **Timing** (`timing_summary.csv`, `timing_calls.csv`, `run_info.json`; AMD Ryzen 7 2700, medians over 5 seeds):
+  transition fit 0.09 s per seed; WEDD on ten concepts 0.14 s per call; class-reduct search 0.59 s per failure mode
+  (0.28-0.83 s); all rulebooks and CART 6.2 s per seed (5.4-6.4 s); grid of three MLPs 52.7 s (42.0-55.3 s); whole seed
+  58.3 s (47.7-61.8 s).
+- **Threshold sensitivity** (`sensitivity_tau_smin.csv`; predicted concepts, WEDD cuts fixed, training rows for the concept
+  sets, validation rows for the metrics). Frozen setting tau 0.84, s_min 11: exact HDF / PWF / OSF sets in 1 / 4 / 2
+  seeds, validation macro-F1 0.451, HDF recall 0.162 (identical to the frozen concept sets). tau 0.60, s_min 11:
+  4 / 4 / 0 seeds, no distractor, macro-F1 0.566, HDF recall 0.610. tau 0.70, s_min 11: 3 / 5 / 1 seeds, macro-F1 0.534.
+  At tau 0.84, s_min 5 or 8 changes the sets little (1 / 3-4 / 2), and s_min 5 admits distractors. CART on validation
+  rows: macro-F1 0.661.

@@ -1,0 +1,61 @@
+               statistic                                     method  point_mean_over_seeds  ci95_low  ci95_high
+                macro-F1                                        MLP                 0.7048    0.6773     0.7311
+mean failure-mode recall                                        MLP                 0.6548    0.6158     0.6927
+             recall, HDF                                        MLP                 0.8762    0.8095     0.9333
+             recall, PWF                                        MLP                 0.7625    0.6625     0.8500
+             recall, OSF                                        MLP                 0.8833    0.8066     0.9492
+             recall, TWF                                        MLP                 0.0972    0.0250     0.1917
+                macro-F1                         class-reduct, true                 0.7102    0.6834     0.7288
+mean failure-mode recall                         class-reduct, true                 0.5671    0.5290     0.6032
+             recall, HDF                         class-reduct, true                 0.8476    0.7810     0.9143
+             recall, PWF                         class-reduct, true                 0.5750    0.4625     0.6750
+             recall, OSF                         class-reduct, true                 0.8458    0.7666     0.9217
+             recall, TWF                         class-reduct, true                 0.0000    0.0000     0.0000
+                macro-F1                    class-reduct, predicted                 0.4574    0.4222     0.4835
+mean failure-mode recall                    class-reduct, predicted                 0.2525    0.2123     0.2906
+             recall, HDF                    class-reduct, predicted                 0.1333    0.0857     0.1714
+             recall, PWF                    class-reduct, predicted                 0.3250    0.2250     0.4253
+             recall, OSF                    class-reduct, predicted                 0.5517    0.4375     0.6667
+             recall, TWF                    class-reduct, predicted                 0.0000    0.0000     0.0000
+                macro-F1                    as-published, predicted                 0.2803    0.2584     0.3019
+mean failure-mode recall                    as-published, predicted                 0.1320    0.1067     0.1570
+             recall, HDF                    as-published, predicted                 0.2381    0.1714     0.3048
+             recall, PWF                    as-published, predicted                 0.0875    0.0375     0.1500
+             recall, OSF                    as-published, predicted                 0.2025    0.1500     0.2550
+             recall, TWF                    as-published, predicted                 0.0000    0.0000     0.0000
+                macro-F1                         as-published, true                 0.2658    0.2429     0.2870
+mean failure-mode recall                         as-published, true                 0.1436    0.1166     0.1727
+             recall, HDF                         as-published, true                 0.4095    0.3524     0.4667
+             recall, PWF                         as-published, true                 0.0125    0.0000     0.0375
+             recall, OSF                         as-published, true                 0.0133    0.0000     0.0400
+             recall, TWF                         as-published, true                 0.1389    0.0472     0.2333
+                macro-F1                            CART, predicted                 0.6693    0.6408     0.6928
+mean failure-mode recall                            CART, predicted                 0.5524    0.5146     0.5920
+             recall, HDF                            CART, predicted                 0.7429    0.6667     0.8190
+             recall, PWF                            CART, predicted                 0.7625    0.6750     0.8500
+             recall, OSF                            CART, predicted                 0.7042    0.6108     0.7950
+             recall, TWF                            CART, predicted                 0.0000    0.0000     0.0000
+                   AUROC                            max-probability                 0.9377    0.9219     0.9503
+                   AUROC                    class-reduct rule doubt                 0.7818    0.7479     0.8088
+                   AUROC                       hybrid, class-reduct                 0.9443    0.9281     0.9566
+                   AUROC                    as-published rule doubt                 0.8076    0.7702     0.8403
+                   AUROC                       hybrid, as-published                 0.9307    0.9116     0.9456
+     macro-F1 difference               class-reduct, true minus MLP                 0.0055   -0.0304     0.0347
+              AUROC gain hybrid, class-reduct minus max-probability                 0.0065    0.0031     0.0102
+              AUROC gain hybrid, as-published minus max-probability                -0.0071   -0.0191     0.0034
+ seed           statistic                                     method   point  ci95_low  ci95_high
+   42 macro-F1 difference               class-reduct, true minus MLP  0.0417   -0.0338     0.1077
+   42          AUROC gain hybrid, class-reduct minus max-probability  0.0102    0.0030     0.0202
+   42          AUROC gain hybrid, as-published minus max-probability -0.0076   -0.0209     0.0051
+   43 macro-F1 difference               class-reduct, true minus MLP -0.0686   -0.1622     0.0187
+   43          AUROC gain hybrid, class-reduct minus max-probability  0.0023   -0.0034     0.0083
+   43          AUROC gain hybrid, as-published minus max-probability  0.0002   -0.0161     0.0181
+   44 macro-F1 difference               class-reduct, true minus MLP -0.0026   -0.0733     0.0620
+   44          AUROC gain hybrid, class-reduct minus max-probability  0.0051    0.0008     0.0102
+   44          AUROC gain hybrid, as-published minus max-probability -0.0044   -0.0117     0.0022
+   45 macro-F1 difference               class-reduct, true minus MLP  0.0238   -0.0539     0.0882
+   45          AUROC gain hybrid, class-reduct minus max-probability  0.0065   -0.0033     0.0212
+   45          AUROC gain hybrid, as-published minus max-probability -0.0520   -0.1039    -0.0124
+   46 macro-F1 difference               class-reduct, true minus MLP  0.0331   -0.0361     0.0891
+   46          AUROC gain hybrid, class-reduct minus max-probability  0.0084    0.0033     0.0139
+   46          AUROC gain hybrid, as-published minus max-probability  0.0284    0.0083     0.0565

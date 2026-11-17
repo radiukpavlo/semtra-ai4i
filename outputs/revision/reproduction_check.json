@@ -1,0 +1,86 @@
+{
+  "objects": {
+    "rows_frozen": 9960,
+    "rows_rerun": 9960,
+    "max_abs_diff": {
+      "seed": 0.0,
+      "udi": 0.0,
+      "y": 0.0,
+      "mlp_pred": 0.0,
+      "mlp_max_prob": 0.0,
+      "cr_pred": 0.0,
+      "make_pred": 0.0,
+      "cart_pred": 0.0,
+      "doubt_mlp_max_prob": 0.0,
+      "doubt_class_reduct_disagreement": 0.0,
+      "doubt_class_reduct_hybrid": 0.0,
+      "doubt_make_disagreement": 0.0,
+      "doubt_make_hybrid": 0.0
+    },
+    "unequal_columns": []
+  },
+  "metrics": {
+    "rows_frozen": 30,
+    "rows_rerun": 30,
+    "max_abs_diff": {
+      "seed": 0.0,
+      "coverage": 0.0,
+      "covered_accuracy": 0.0,
+      "covered_macro_f1": 0.0,
+      "macro_f1_abstain_as_wrong": 0.0,
+      "recall_none": 0.0,
+      "recall_HDF": 0.0,
+      "recall_PWF": 0.0,
+      "recall_OSF": 0.0,
+      "recall_TWF": 0.0,
+      "failure_mode_recall_mean": 0.0,
+      "covered_fidelity": 0.0,
+      "conflict_rate": 0.0,
+      "fallback_rate": 0.0,
+      "far_fallback_abstention_rate": 0.0,
+      "rule_count": 0.0,
+      "mean_conditions": 0.0,
+      "rules_using_distractor": 0.0,
+      "distractor_cuts": 0.0,
+      "source_strict_lower": 0.0,
+      "source_boundary_high_confidence": 0.0,
+      "source_semantic_prototype": 0.0,
+      "max_depth": 0.0
+    },
+    "unequal_columns": []
+  },
+  "triage": {
+    "rows_frozen": 25,
+    "rows_rerun": 25,
+    "max_abs_diff": {
+      "seed": 0.0,
+      "mlp_errors": 0.0,
+      "n": 0.0,
+      "aurc": 0.0,
+      "auroc": 0.0,
+      "error_recall_at_5pct": 0.0,
+      "error_recall_at_10pct": 0.0,
+      "confident_errors": 0.0,
+      "confident_errors_flagged": 0.0,
+      "bm_flagged_rows": 0.0,
+      "bm_errors": 0.0,
+      "bm_caught_by_rule_flags": 0.0,
+      "bm_caught_by_mlp_same_budget": 0.0,
+      "bm_caught_by_rule_only": 0.0,
+      "bm_caught_by_either": 0.0
+    },
+    "unequal_columns": []
+  },
+  "cuts": {
+    "rows_frozen": 314,
+    "rows_rerun": 314,
+    "max_abs_diff": {
+      "seed": 0.0,
+      "cut_minmax": 0.0,
+      "cut_physical": 0.0
+    },
+    "unequal_columns": []
+  },
+  "reproduced": true,
+  "largest_abs_diff": 0.0
+}
